@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width,initial-scale=1.0">
+    <title>X-GROW</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans"
+    />
+    <link rel="stylesheet" href="../CSS/xgrow.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script></script>
+  </head>
+  <body>
+      <!-- Navigasi Bar Awal-->
+      <nav >
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">X-GROW</label>
+        <ul>
+          <li class="active"> <a class="navbar-link" href="#program">Program</a>
+          </li>
+          <li class="active"><a class="navbar-link" href="">Promo</a>
+          </li>
+          <li class="active"><a class="navbar-link" href="">Testimoni</a>
+          </li>
+          <li class="active"><a class="navbar-link" href="">Layanan</a>
+          </li>
+          <li class="active"><a class="navbar-link" href="Tentangkami.html">Tentang Kami</a>
+        </ul>
+      </nav>
+      <!-- Navigasi Bar akhir -->
+
+      <!-- Header content Awal -->
+      <div class="page-center hero-center">
+        <div class="hero-wrap">
+          <div class="hero-left">
+            <h1 class="hero-title">Pusat Pelatihan Kursus Bersertifikat</h1>
+            <div class="xgrow-header">
+              <form class="form-section">
+                <label
+                  >Diskon spesial untukmu dengan isi nomor HP Sekarang
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  minlength="9"
+                  maxlength="16"
+                  pattern="[+][6][2][0-9]{9,16}"
+                  placeholder="Contoh: +628x xxxx xxxx"
+                  required
+                  value="+62"
+                />
+                <button
+                  type="submit"
+                  id="button-variant"
+                  class="hero-button-submit"
+                  onclick="getDiscountClick(this, event)"
+                  data-tracking-name="button-variant"
+                >
+                  Dapatkan Diskon <img src="" alt="" />
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="hero-right" class="hero-right">
+            <picture>
+              <source srcset="" type="image/webp" />
+              <source srcset="" type="image/png" />
+              <img
+                src=""
+                class="hero-img"
+                alt="asset image hero"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <!-- Header content akhir -->
+
+      <!-- Tentang Kami -->
+      <div class="grid">
+        <h1>Tim Kami</h1>
+        <article>
+          <img src="" alt="Bima" />
+          <div class="deskripsi">
+            <h2>Bima Maarschal Rizky Kurnia Falah</h2>
+            <p class="title">Project Leader</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+        <article>
+          <img src="" alt="Fajar" />
+          <div class="deskripsi">
+            <h2>Fajar Nur Shodiq</h2>
+            <p class="title">Frondend Engineer</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+        <article>
+          <img src="" alt="Kamila" />
+          <div class="deskripsi">
+            <h2>Kamila Adha Fathimah</h2>
+            <p class="title">Backend Engineer</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+        <article>
+          <img src="" alt="Rindu" />
+          <div class="deskripsi">
+            <h2>Rindu Wastuti Idroes</h2>
+            <p class="title">Backend Engineer</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+        <article>
+          <img src="" alt="Biah" />
+          <div class="deskripsi">
+            <h2>Robi'ah Al Adawiyah</h2>
+            <p class="title">Frondend Engineer</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+        <article>
+          <img src="" alt="Whili" />
+          <div class="deskripsi">
+            <h2>Whilli Usmania</h2>
+            <p class="title">Quality Assurance</p>
+            <a href="">
+              <p><button class="button">Contact</button></p>
+            </a>
+          </div>
+        </article>
+      </div>
+      <!-- Tentang Kami Akhir -->
+      <!-- Footer content awal -->
+      <footer>
+        <div class="footer-container">
+          <div class="socialicons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="footerNav">
+            <ul>
+              <li><a href="a">Home</a></li>
+              <li><a href="a">Program</a></li>
+              <li><a href="a">Promo</a></li>
+              <li><a href="a">Layanan</a></li>
+              <li><a href="Tentangkami.html">Tentang Kami</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="footerBottom">
+          <p>Copyright &copy;2023; Designed by <span class="designer">Group 10 Semarang</span></p>
+        </div>
+    </footer>
+      <!-- Footer content akhir -->
+    </div>
+  </body>
+</html>
