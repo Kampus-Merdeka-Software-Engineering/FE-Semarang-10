@@ -1,16 +1,16 @@
 /* Style Global */
-*{
+html,
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #fff;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: Arial, sans-serif;
   list-style: none;
   box-sizing: border-box;
 }
-body{
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-family: Arial, sans-serif;
-}
+
 h1,
 h2,
 h3,
@@ -93,7 +93,7 @@ a:hover {
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
   }
   nav ul li {
     display: block;
@@ -112,64 +112,130 @@ a:hover {
     left: 0;
   }
 }
-/*-----------------------------------------------------------------
-/* Header - Content */
-/*-----------------------------------------------------------------
+/* -----------------------------------------------------------------
+Header - Content 
+----------------------------------------------------------------- */
 
------------------------------------------------------------------
-/* Style - Content - 1 */
-/*-----------------------------------------------------------------
+/* -----------------------------------------------------------------
+Style - Tim 
+----------------------------------------------------------------- */
+.h1-tim{
+  text-align: center;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px;
+}
 
------------------------------------------------------------------
-/* Style - Content - 2 */
-/*-----------------------------------------------------------------
+.grid img {
+  padding-left: 12px;
+  padding-top: 9px;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
+}
 
------------------------------------------------------------------
-/* Style - Content - 3 */
+img {
+  object-fit: cover;
+}
+
+.grid > article {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  width: 280px;
+  height: 410px;
+  transition: 0.2s transform;
+  cursor: pointer;
+}
+
+.grid > article img {
+  padding-left: 12px;
+  padding-top: 15px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.grid > article:hover {
+  transform: scale(1.1);
+}
+
+.grid p {
+  color: #000;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.grid h2 {
+  color: #000;
+  font-size: 25px;
+}
+.grid button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #3389d8;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+}
+
+.grid button:hover {
+  background-color: #555;
+}
+
+
 /*----------------------------------------------------------------- 
-
-/*----------------------------------------------------------------- 
-/* Style - Footer - Content */
-/*----------------------------------------------------------------- */
-footer{
+Style - Footer - Content 
+---------------------------------------------------------------- */
+footer {
   background-color: #111;
 }
-.footer-container{
+.footer-container {
   width: 100%;
   padding: 70px 30px 20px;
 }
-.socialicons{
-  display: flex;
-  justify-content:center ;
-}
-.socialicons a{
-text-decoration: none;
-padding: 10px;
-background-color: white;
-margin: 10px;
-border-radius:50% ;
-}
-.socialicons a{
-font-size: 2em;
-color: black;
-opacity: 0.9;
-}
-.socialicons a:hover{
-  background-color: #111;
-  transition: 0.5s;
-}
-.socialicons a:hover{
-  color: white;
-  transition: 0.5s;
-}
-.footerNav{
-  margin: 30px;
-}
-.footerNav ul{
+.socialicons {
   display: flex;
   justify-content: center;
 }
-.footerNav ul li a{
+.socialicons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialicons a {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.socialicons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialicons a:hover {
+  color: white;
+  transition: 0.5s;
+}
+.footerNav {
+  margin: 30px;
+}
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+}
+.footerNav ul li a {
   color: white;
   margin: 20px;
   text-decoration: none;
@@ -177,14 +243,15 @@ opacity: 0.9;
   opacity: 0.7s;
   transition: 0.5s;
 }
-.footerNav ul li a:hover{
+.footerNav ul li a:hover {
   opacity: 1;
 }
-.footerBottom{
+.footerBottom {
   background-color: #000;
   padding: 20px;
   text-align: center;
 }
-.footerBottom p{
+.footerBottom p {
   color: white;
 }
+
