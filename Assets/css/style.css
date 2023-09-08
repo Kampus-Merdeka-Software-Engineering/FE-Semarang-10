@@ -2,13 +2,14 @@
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #fff;
+
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: Arial, sans-serif;
   list-style: none;
   box-sizing: border-box;
+  outline: none;
 }
 
 h1,
@@ -27,18 +28,28 @@ p {
   color: #afafaf;
 }
 /* Style Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  padding-right: 40px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-left: 10px;
+}
 nav {
   background-color: #0082e6;
   width: 100%;
   height: 80px;
 }
-label.logo {
-  color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: o 100px;
-  font-weight: bold;
-}
+
 nav ul {
   float: right;
   margin-right: 20px;
@@ -73,7 +84,7 @@ a:hover {
   display: none;
 }
 @media (max-width: 952px) {
-  .navbar-logo {
+  .logo {
     font-size: 30px;
     padding-left: 50px;
   }
@@ -112,71 +123,18 @@ a:hover {
     left: 0;
   }
 }
-/*-----------------------------------------------------------------
-Header - Content 
-------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------
-Style - Content - 1 
+Promo 
 -----------------------------------------------------------------*/
-.xgrow-container {
-  display: flex;
-  align-items: center;
-  padding: 150px;
-  padding-bottom: 10px;
-  background-color: #ffffff;
-}
-
-.xgrow-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.xgrow-content h1 {
-  font-size: 42px;
-  font-weight: 100;
-  margin: 0;
-}
-
-.xgrow-content p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.content-image1 {
-  max-width: 50%;
-  padding: 20px;
-}
-
-.content-image1 img {
-  max-width: 80%;
-  border-radius: 15px;
-  height: auto;
-}
-
-.content-image1 {
-  position: relative;
-  overflow: hidden;
-}
-
-#content1-fade-image {
-  opacity: 0;
-  transition: opacity 2.5s ease-in-out;
-}
-
-#content1-fade-image.loaded {
-  opacity: 1;
-}
-
-/*-----------------------------------------------------------------
-Style - Content - 2 
--------------------------------------------------------------------*/
-.section2 {
+.promo-container {
   padding: 120px 0;
   background-color: #ffffff;
 }
-
-.xgrowcontent2 {
+.promo-container h1 {
+  top: 100px;
+}
+.promo-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,39 +143,35 @@ Style - Content - 2
   padding: 20px;
 }
 
-.content-image2 {
+.promo-image {
   flex: 1;
   padding: 20px;
 }
 
-.content-image2 img {
+.promo-image img {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
   display: block;
+  text-align: left;
 }
 
-.text-container {
+.promo-text {
   flex: 1;
   padding: 20px;
 }
 
-.text-container h2 {
+.promo-text h2 {
   font-size: 42px;
   font-weight: 100;
   margin: 0;
 }
 
-.text-container p {
+.promo-text p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 30px;
-}
-
-.xgrow-content h1 {
-  font-size: 42px;
-  font-weight: 100;
-  margin: 0;
+  left: 30px;
 }
 
 .button-content2 {
@@ -233,20 +187,21 @@ Style - Content - 2
 .button-content2:hover {
   background-color: #0056b3;
 }
-/*-----------------------------------------------------------------
-Style - Content - 3 
------------------------------------------------------------------*/
 
-.xgrow-content3 h1 {
+/*-----------------------------------------------------------------
+Program
+-------------------------------------------------------------------*/
+.program-container h1 {
   font-size: 32px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   padding: 20px;
   padding-bottom: 50px;
   padding-left: 150px;
+  text-align: left;
 }
 
-.program-container {
+.program-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +215,7 @@ Style - Content - 3
   max-width: 1500px;
   margin: 0 auto;
 }
-.program-content {
+.description {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -274,20 +229,33 @@ Style - Content - 3
   );
 }
 
-.program-content img {
+.description img {
   max-width: 100%;
   height: 150px;
   border-radius: 8px;
 }
 
-.program-content h2 {
+.description h2 {
   margin-top: 10px;
   font-size: 1.5rem;
 }
 
-.program-content p {
+.description p {
   margin-top: 5px;
   font-size: 1rem;
+}
+
+/*-----------------------------------------------------------------
+Layanan
+-----------------------------------------------------------------*/
+layanan h1 {
+  font-size: 32px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  text-align: left;
 }
 
 /*----------------------------------------------------------------- 
@@ -295,6 +263,7 @@ Style - Footer - Content
 ---------------------------------------------------------------- */
 footer {
   background-color: #111;
+  width: 100%;
 }
 .footer-container {
   width: 100%;
@@ -327,7 +296,7 @@ footer {
 
 .footerBottom {
   background-color: #000;
-  padding: 20px;
+  padding: 0;
   text-align: center;
 }
 .footerBottom p {
