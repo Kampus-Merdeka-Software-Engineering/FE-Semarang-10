@@ -1,8 +1,8 @@
 /* Style Global */
-html,
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
 
+html, body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-image: none;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -28,6 +28,7 @@ p {
   color: #afafaf;
 }
 /* Style Navbar */
+
 header {
   display: flex;
   justify-content: space-between;
