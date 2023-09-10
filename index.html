@@ -18,15 +18,15 @@
   </head>
   <body>
       <!-- Navigasi Bar -->
-      <header>
-        <img class="log" src="assets/gambar/" alt="logo">
+      <header class="header">
+        <img src="assets/gambar/logo.png" alt="logo" class="logo">
         <nav>
           <input type="checkbox" id="check">
           <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
           </label>
           <ul>
-            <li class="active"> <a class="nav-link" aria-current="page" href="#">Home</a>
+            <li class="active"> <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="active"><a class="nav-link" href="#promo">Promo</a>
             </li>
@@ -40,19 +40,19 @@
       </header>
       <!-- Navigasi Bar -->
 
-      <section id="background">
+    <section id="background">
         <!-- Promo -->
       <section id="promo">
         <div class="promo-container">
           <h1 id="promo">Promo</h1>
           <div class="promo-image">
-            <img src="/assets/gambar/promo1.jpg" alt="Gambar kursus"/>
+            <img src="assets/gambar/promo1.jpg" alt="Gambar kursus"/>
           </div>
           <div class="promo-text">
-            <p>Memnyambut hari sumpah pemuda ada promo menarik</p>
+            <p>Menyambut hari sumpah pemuda ada promo menarik</p>
             <p>Spesial 1000 pendaftar tercepat</p>
             <p>Berlaku untuk periode 10-25 Oktober 2023 </p>
-            <a href="a" class="button-content">Daftar Sekarang</a>
+            <a href="#hubungi" class="button-content">Infomasi Lebih Lanjut</a>
           </div>
         </div>
       </section>
@@ -110,20 +110,67 @@
       <!-- Layanan -->
       <section id="layanan">
         <div class="layanan">
-          <h1>Layanan</h1>
-          <img src="" alt="layanan">
+          <img src="assets/gambar/Program.jpg">
+          <div class="layanan-container">
+            <p>Apa yang Akan Kamu Dapatkan dari Program Career Bootcamp Ini?</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Live class via zoom dengan mentor selama 40+ pertemuan</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Extra video learning 20+ jam untuk menunjang pembelajaran kelas</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Teori practical exercises setiap pertemuan</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Project portofolio di bidang Program Career Bootcamp yang diikuti</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Konsultasi pribadi bersama mentor ahli berpengalaman</p>
+          </div>
+          <div class="layanan-content">
+            <img src="assets/gambar/check.png" alt="check">
+            <p>Program career prepartion dan kolsultasi karir gratis sebagai alumni</p>
+          </div>
         </div>
       </section>
       <!-- Layanan -->
-      </section>
-  
+    </section>
+  <!-- Hubungi  -->
+  <section id="hubungi">
+    <div class="hubungi-container">
+        <h1>HUBUNGI KAMI</h1>
+        <p class="information">HUBUNGI KAMI DAN KAMI AKAN KEMBALI KEPADA ANDA</p>
+    </div>
+    <div class="contact-form">
+        <form>
+            <label for="nama">Nama :</label>
+            <input type="text" id="nama" name="nama" required >
+            <br>
+            <label for="pertanyaan">Pertanyaan :</label>
+            <textarea id="pertanyaan" name="pertanyaan" rows="4" required></textarea>
+            <br><br>
+        </form>
+    </div>
+    <div>
+        <button class="submit-button">Submit</button>
+    </div>   
+</section>
+  <!-- Hubungi -->
     <!-- Footer -->
       <footer>
         <div class="footer-container">
           <div class="socialicons">
             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i>
+            </a>
             <a href="https://www.tiktok.com/id-ID/"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://www.facebook.com/?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
           </div>
@@ -134,8 +181,6 @@
         </div>
     </footer>
     <!-- Footer -->
-
-
   </body>
 </html>
   

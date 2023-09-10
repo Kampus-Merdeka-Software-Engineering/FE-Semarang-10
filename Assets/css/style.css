@@ -1,6 +1,7 @@
 /* Style Global */
 
-html, body {
+html,
+body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-image: none;
   margin: 0;
@@ -29,7 +30,7 @@ p {
 }
 /* Style Navbar */
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,9 +43,11 @@ header {
 
 .logo {
   width: 100px;
-  height: auto;
-  margin-left: 10px;
+  height: 80px;
+  margin-left: 0px;
+  background-color: #0082e6;
 }
+
 nav {
   background-color: #0082e6;
   width: 100%;
@@ -54,10 +57,11 @@ nav {
 nav ul {
   float: right;
   margin-right: 20px;
+  align-items: center;
 }
 nav ul li {
   display: inline-block;
-  line-height: 80px;
+  line-height: 50px;
   margin: 0 5px;
 }
 nav ul li a {
@@ -66,6 +70,7 @@ nav ul li a {
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 3px;
+  text-decoration: none;
 }
 a.active,
 a:hover {
@@ -124,19 +129,27 @@ a:hover {
     left: 0;
   }
 }
-
+/* Background */
+#background{
+ background: url();
+}
 /*-----------------------------------------------------------------
 Promo 
 -----------------------------------------------------------------*/
 .promo-container {
+  margin: auto;
   padding: 120px 0;
   background-color: #ffffff;
+  margin-bottom: 50px;
+  display: flex;
 }
 .promo-container h1 {
   top: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
 }
 .promo-content {
-  display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
@@ -150,7 +163,7 @@ Promo
 }
 
 .promo-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 15px;
   display: block;
@@ -164,7 +177,7 @@ Promo
 
 .promo-text h2 {
   font-size: 42px;
-  font-weight: 100;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -175,7 +188,7 @@ Promo
   left: 30px;
 }
 
-.button-content2 {
+.button-content {
   display: inline-block;
   padding: 12px 24px;
   background-color: #007bff;
@@ -185,13 +198,19 @@ Promo
   transition: background-color 0.3s ease;
 }
 
-.button-content2:hover {
+.button-content:hover {
   background-color: #0056b3;
 }
 
 /*-----------------------------------------------------------------
 Program
 -------------------------------------------------------------------*/
+.program-container {
+  margin: auto;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+
+}
 .program-container h1 {
   font-size: 32px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -249,15 +268,93 @@ Program
 /*-----------------------------------------------------------------
 Layanan
 -----------------------------------------------------------------*/
-layanan h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding: 20px;
-  padding-bottom: 50px;
-  padding-left: 150px;
-  text-align: left;
+.layanan {
+  display: flex;
+  margin: auto;
+  margin-bottom: 50px;
 }
+.layanan img {
+  width: 50%;
+  height: auto;
+  margin: 40px 30px;
+}
+
+.layanan-content {
+  padding: 0;
+}
+.layanan-content img {
+  display: block;
+  height: 25px;
+  width: 25px;
+  aspect-ratio: auto 25/25;
+  object-fit: cover;
+}
+.layanan-container p {
+  color: #576168 !important;
+  font-weight: 700 !important;
+  font-size: calc(1.3rem);
+}
+.layanan-container p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.layanan-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+/*----------------------------------------------------------------- 
+Style - Hubungi Kami - Content 
+---------------------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 95px;
+  margin-top: 5px;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"],
+textarea {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.hubungi-container{
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;  
+  font-size: large;
+}
+.information{
+  text-align: center;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.submit-button {
+  background-color: #007bff; 
+  color: #ffffff; 
+  font-size: 15px; 
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer; 
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 95px;
+}
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
 
 /*----------------------------------------------------------------- 
 Style - Footer - Content 
@@ -265,6 +362,7 @@ Style - Footer - Content
 footer {
   background-color: #111;
   width: 100%;
+  align-items: center;
 }
 .footer-container {
   width: 100%;
@@ -297,9 +395,16 @@ footer {
 
 .footerBottom {
   background-color: #000;
-  padding: 0;
+  padding: 20px;
   text-align: center;
 }
 .footerBottom p {
   color: white;
+}
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
 }
