@@ -2,7 +2,7 @@
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
- 
+
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -28,22 +28,24 @@ p {
   color: #afafaf;
 }
 /* Style Navbar */
-header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5PX;
+  padding: 10px 5px;
   padding-right: 40px;
   background-color: white;
   position: fixed;
   width: 100%;
 }
 
-.logo{
+.logo {
   width: 100px;
-  height: auto;
-  margin-left: 10px;
+  height: 80px;
+  margin-left: 0px;
+  background-color: #0082e6;
 }
+
 nav {
   background-color: #0082e6;
   width: 100%;
@@ -53,10 +55,11 @@ nav {
 nav ul {
   float: right;
   margin-right: 20px;
+  align-items: center;
 }
 nav ul li {
   display: inline-block;
-  line-height: 80px;
+  line-height: 50px;
   margin: 0 5px;
 }
 nav ul li a {
@@ -65,6 +68,7 @@ nav ul li a {
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 3px;
+  text-decoration: none;
 }
 a.active,
 a:hover {
@@ -123,12 +127,11 @@ a:hover {
     left: 0;
   }
 }
-
-
 /* -----------------------------------------------------------------
 Style - Tim 
 ----------------------------------------------------------------- */
-.h1-tim{
+.h1-tim {
+  padding-top: 160px;
   text-align: center;
 }
 .grid {
@@ -202,13 +205,13 @@ img {
   background-color: #555;
 }
 
-
 /*----------------------------------------------------------------- 
 Style - Footer - Content 
 ---------------------------------------------------------------- */
 footer {
   background-color: #111;
   width: 100%;
+  margin-top: 80px;
 }
 .footer-container {
   width: 100%;
@@ -246,4 +249,11 @@ footer {
 }
 .footerBottom p {
   color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
 }
