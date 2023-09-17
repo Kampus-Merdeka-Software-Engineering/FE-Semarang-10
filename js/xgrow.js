@@ -1,5 +1,5 @@
 
-// Fade respon gambar
+// Fade respon img
   document.addEventListener("DOMContentLoaded", function () {
     var image = document.getElementById("home-fade-image");
     image.classList.add("loaded");
@@ -72,7 +72,7 @@ document.querySelectorAll("nav a").forEach((anchor) => {
 const promoImage = document.querySelector('.promo-image img');
 const promoText = document.querySelector('.promo-text');
 
-// Data promo (gambar dan teks)
+// Data promo (img dan teks)
 const promos = [
   {
     image: 'assets/img-promo/img-p.png',
