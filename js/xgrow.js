@@ -1,13 +1,13 @@
 
 // Fade respon gambar
   document.addEventListener("DOMContentLoaded", function () {
-    var image = document.getElementById("tampil1-fade-image");
+    var image = document.getElementById("home-fade-image");
     image.classList.add("loaded");
   });
   
 // Teks changing
   const changingTextElement = document.getElementById(
-    "tampil1-text-changing"
+    "home-text-changing"
   );
   const words = [
     "keterampilan",

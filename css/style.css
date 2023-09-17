@@ -131,118 +131,63 @@ nav a.active {
 
 /* 
 -----------------------------------------------------------------
-Style - Tampilan Awal (Home)
+Style - Tampilan Home
 ----------------------------------------------------------------- 
 */
 
-.tampil1 {
+.home {
   display: flex;
   align-items: center;
   padding: 150px;
-  padding-bottom: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   background-color: #ffffff;
 }
 
-.tampil1-text {
+.home-text {
   flex: 1;
   padding: 20px;
 }
 
-.tampil1-text h1 {
+.home-text h1 {
   font-size: 42px;
   font-weight: 100;
   margin: 0;
 }
 
-.tampil1-text p {
+.home-text p {
   font-size: 16px;
   margin: 10px 0;
 }
 
-.tampil1-image {
+.home-image {
   max-width: 50%;
   padding: 20px;
 }
 
-.tampil1-image img {
+.home-image img {
   max-width: 80%;
   border-radius: 15px;
   height: auto;
 }
 
-.tampil1-image {
+.home-image {
   position: relative;
   overflow: hidden;
 }
 
-#tampil1-fade-image {
+#home-fade-image {
   opacity: 0;
   transition: opacity 2.5s ease-in-out;
 }
 
-#tampil1-fade-image.loaded {
+#home-fade-image.loaded {
   opacity: 1;
-}
-
-
-
-/* 
------------------------------------------------------------------
-Style - Tampilan - 3
------------------------------------------------------------------ 
-*/
-
-.tampil3-10smg h1 {
-  font-size: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 300;  
-  padding: 20px;
-  padding-bottom: 50px;
-  padding-left: 150px;
-}
-
-.tampil3-10smg-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
-  padding: 0 10px;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-.kartu-tampil3-10smg {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
-}
-
-.kartu-tampil3-10smg img {
-  max-width: 100%;
-  height: 150px;
-  border-radius: 8px;
-}
-
-.kartu-tampil3-10smg h2 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-}
-
-.kartu-tampil3-10smg p {
-  margin-top: 5px;
-  font-size: 1rem;
 }
 
 
 /*-----------------------------------------------------------------
 Promo 
 -----------------------------------------------------------------*/
-/* CSS untuk tampilan promo */
 .promo-container {
   display: flex;
   justify-content: center;
@@ -256,7 +201,7 @@ Promo
 
 .promo-content {
   display: flex;
-  align-items: center; /* Mengatur konten agar bersebelahan vertikal */
+  align-items: center; 
   max-width: 1200px;
   width: 100%;
 }
@@ -264,7 +209,7 @@ Promo
 .promo-image {
   flex: 1;
   display: flex;
-  justify-content: center; /* Mengatur gambar agar berada di tengah horizontal */
+  justify-content: center;
 }
 
 .fade-in {
@@ -300,7 +245,6 @@ Promo
   color: #ffffff;
 }
 
-/* Media query untuk responsif */
 @media (max-width: 768px) {
   .promo-content {
     flex-direction: column;
@@ -317,73 +261,94 @@ Promo
 }
 
 
+/* 
+-----------------------------------------------------------------
+Style - Card Program
+----------------------------------------------------------------- 
+*/
 
-/*-----------------------------------------------------------------
-Program
--------------------------------------------------------------------*/
-.program-container {
-  margin: auto;
-  background-color: #ffffff;
-  margin-bottom: 50px;
-
-}
-.program-container h1 {
+.program h1 {
   font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding: 20px;
-  padding-bottom: 50px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;  
+  padding: 150px;
+  padding-bottom: 20px;
   padding-left: 150px;
-  text-align: left;
 }
 
-.program-content {
+.program-2 h1 {
+  font-size: 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300; 
+  padding-top: 50px; 
+  padding-bottom: 20px;
+  padding-left: 150px;
+}
+
+.program-3 h1 {
+  font-size: 22px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300; 
+  padding-top: 20px; 
+  padding-bottom: 120px;
+  margin-right: 150px;
+  text-align: right; /* Mengatur teks agar tetap di tengah */
+}
+
+.program-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: linear-gradient(
-    105deg,
-    rgba(91, 104, 235, 1) 0%,
-    rgba(40, 225, 253, 1) 100%
-  );
+  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
   padding: 0 10px;
   max-width: 1500px;
   margin: 0 auto;
 }
-.description {
+.kartu-program {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px;
   text-align: center;
-  background-color: linear-gradient(
-    105deg,
-    rgba(91, 104, 235, 1) 0%,
-    rgba(40, 225, 253, 1) 100%
-  );
+  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
 }
 
-.description img {
+.kartu-program img {
   max-width: 100%;
   height: 150px;
   border-radius: 8px;
 }
 
-.description h2 {
+.kartu-program h2 {
   margin-top: 10px;
   font-size: 1.5rem;
 }
 
-.description p {
+.kartu-program p {
   margin-top: 5px;
   font-size: 1rem;
 }
 
+
 /*-----------------------------------------------------------------
 Layanan
 -----------------------------------------------------------------*/
+
+/* Layanan h1
+*/
+.layananh1 h1 {
+  font-size: 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;  
+  padding: 50px;
+  padding-bottom: 50px;
+  background-color: #fdbd58;
+  color: #ffffff;
+  padding-left: 150px;
+}
+
 .layanan {
   display: flex;
   margin: auto;
@@ -421,6 +386,7 @@ Layanan
   font-size: 1rem;
   margin: 0;
 }
+
 /*----------------------------------------------------------------- 
 Style - Hubungi Kami - Content 
 ---------------------------------------------------------------- */
