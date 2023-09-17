@@ -85,19 +85,6 @@ nav a.active {
   color: #fdbd58;
 }
 
-.hamburger {
-  display: none; /* Sembunyikan hamburger secara default */
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
 @media (max-width: 768px) {
   .navbar {
     height: auto;
@@ -115,7 +102,7 @@ nav a.active {
 
   .navbar-nav {
     flex-direction: column;
-    display: none; /* Sembunyikan navbar saat tidak aktif */
+    display: none;
   }
 
   .nav-item {
@@ -123,7 +110,6 @@ nav a.active {
     margin-bottom: 10px;
   }
 
-  /* Tampilkan navbar saat class .show aktif */
   .navbar-nav.show {
     display: flex;
   }
@@ -133,7 +119,6 @@ nav a.active {
 /* -----------------------------------------------------------------
 Style - Tampilan Home
 ----------------------------------------------------------------- */
-
 .home {
   display: flex;
   align-items: center;
@@ -287,11 +272,11 @@ Style - Card Program
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
   padding: 0 10px;
   max-width: 1500px;
   margin: 0 auto;
 }
+
 .kartu-program {
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -299,7 +284,6 @@ Style - Card Program
   padding: 20px;
   margin: 20px;
   text-align: center;
-  background-color: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
 }
 
 .kartu-program img {
@@ -388,8 +372,91 @@ Layanan
 /*----------------------------------------------------------------- 
 Mitra
 ---------------------------------------------------------------- */
+/* Style untuk judul */
+.mitra-judul h1 {
+  font-size: 32px; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 80px;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
 
+.mitra-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
 
+.mitra-img {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mitra-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.mitra-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: #fdbd58;
+}
+
+.mitra-icon i {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .mitra-judul h1 {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .mitra-container {
+    max-width: 100%;
+  }
+
+  .mitra-img {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mitra-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mitra-icon i {
+    font-size: 24px;
+  }
+}
 
 /*----------------------------------------------------------------- 
 Style - Hubungi Kami - Content 
@@ -441,14 +508,13 @@ textarea {
   background-color: #0056b3;
 }
 
-
 /*----------------------------------------------------------------- 
 Style - Footer - Content 
 ---------------------------------------------------------------- */
 footer {
   background-color: #111;
   width: 100%;
-  align-items: center;
+  margin-top: 80px;
 }
 .footer-container {
   width: 100%;
@@ -481,16 +547,62 @@ footer {
 
 .footerBottom {
   background-color: #000;
-  padding: 20px;
+  padding: 0;
   text-align: center;
 }
 .footerBottom p {
   color: white;
 }
-.designer {
+.designer{
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
   margin: 0px 5px;
 }
+
+/*----------------------------------------------------------------- 
+Footer Cadangan 
+---------------------------------------------------------------- */
+/* .footer {
+  background-color: #fdbd58;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.footer-icon a{
+  color: #ffffff;
+  text-decoration: none
+}
+
+.fa {
+  font-size: inherit;
+}
+
+.copyright {
+  margin-top: 20px;
+  text-decoration: none;
+}
+.copyright a {
+  font-size: 12pt;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+} */
