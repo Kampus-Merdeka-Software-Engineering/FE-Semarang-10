@@ -112,22 +112,7 @@ nav a.active {
   }
 }
 
-/* .nav-linkgrub a {
-  display: inline-block;
-  padding: 10px 10px;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 13px;
-  background: #fdbd58;
-  background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
-  border-radius: 5px;
-  letter-spacing: 0.3px;
-}
 
-.nav-linkgrub a:hover {
-  color: #fff;
-  background: rgb(91,104,235,1);
-} */
 
 /* 
 -----------------------------------------------------------------
@@ -285,16 +270,6 @@ Style - Card Program
   padding-left: 150px;
 }
 
-.program-3 h1 {
-  font-size: 22px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 300; 
-  padding-top: 20px; 
-  padding-bottom: 120px;
-  margin-right: 150px;
-  text-align: right; /* Mengatur teks agar tetap di tengah */
-}
-
 .program-container {
   display: flex;
   justify-content: center;
@@ -329,6 +304,33 @@ Style - Card Program
 .kartu-program p {
   margin-top: 5px;
   font-size: 1rem;
+}
+
+.program-bottom {
+  font-weight: 300; 
+  padding-top: 50px; 
+  padding-bottom: 120px;
+  padding-right: 20px;
+  margin-right: 150px;
+  text-align: right;
+}
+
+
+.button-program a {
+  padding: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #fdbd58;
+  background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
+  letter-spacing: 0.3px;
+}
+
+.button-program a:hover {
+  color: #fff;
+  background: #ff9d00;
 }
 
 
