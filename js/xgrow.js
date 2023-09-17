@@ -4,7 +4,7 @@
     var image = document.getElementById("home-fade-image");
     image.classList.add("loaded");
   });
-  
+
 // Teks changing
   const changingTextElement = document.getElementById(
     "home-text-changing"
@@ -23,15 +23,12 @@
   }
   setInterval(changeWord, 4000);
 
-// Ketika tautan di navbar di-klik
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
-
-    // Cek apakah tautan mengarah ke halaman lain
     if (href.startsWith("#")) {
       e.preventDefault();
-      const targetId = href.substring(1); // Hilangkan karakter '#' dari href
+      const targetId = href.substring(1);
       const target = document.getElementById(targetId);
     
       if (target) {
@@ -119,5 +116,5 @@ function changePromo() {
   }, 1000);
 }
 
-// Atur interval untuk mengganti promo setiap 3 detik
-setInterval(changePromo, 10000);
+// Atur interval untuk mengganti promo setiap 7 detik
+setInterval(changePromo, 7000);

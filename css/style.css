@@ -1,7 +1,6 @@
 /*-----------------------------------------------------------------
 Global
 -----------------------------------------------------------------*/
-
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -29,7 +28,6 @@ p {
 /*-----------------------------------------------------------------
 Navigasi Bar
 -----------------------------------------------------------------*/
-
 .navbar {
   position: fixed;
   top: 0;
@@ -87,6 +85,19 @@ nav a.active {
   color: #fdbd58;
 }
 
+.hamburger {
+  display: none; /* Sembunyikan hamburger secara default */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: auto;
@@ -104,21 +115,24 @@ nav a.active {
 
   .navbar-nav {
     flex-direction: column;
+    display: none; /* Sembunyikan navbar saat tidak aktif */
   }
 
   .nav-item {
     margin-right: 0;
     margin-bottom: 10px;
   }
+
+  /* Tampilkan navbar saat class .show aktif */
+  .navbar-nav.show {
+    display: flex;
+  }
 }
 
 
-
-/* 
------------------------------------------------------------------
+/* -----------------------------------------------------------------
 Style - Tampilan Home
------------------------------------------------------------------ 
-*/
+----------------------------------------------------------------- */
 
 .home {
   display: flex;
@@ -152,7 +166,8 @@ Style - Tampilan Home
 .home-image img {
   max-width: 80%;
   border-radius: 15px;
-  height: auto;
+  border: 2px solid #000000;
+  padding: 5px;
 }
 
 .home-image {
@@ -246,12 +261,9 @@ Promo
 }
 
 
-/* 
------------------------------------------------------------------
+/* -----------------------------------------------------------------
 Style - Card Program
------------------------------------------------------------------ 
-*/
-
+----------------------------------------------------------------- */
 .program h1 {
   font-size: 32px;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -315,7 +327,6 @@ Style - Card Program
   text-align: right;
 }
 
-
 .button-program a {
   padding: 10px;
   color: #fff;
@@ -337,57 +348,48 @@ Style - Card Program
 /*-----------------------------------------------------------------
 Layanan
 -----------------------------------------------------------------*/
-
-/* Layanan h1
-*/
-.layananh1 h1 {
-  font-size: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 300;  
-  padding: 50px;
-  padding-bottom: 50px;
-  background-color: #fdbd58;
-  color: #ffffff;
-  padding-left: 150px;
-}
-
 .layanan {
-  display: flex;
-  margin: auto;
-  margin-bottom: 50px;
-}
-.layanan img {
-  width: 50%;
-  height: auto;
-  margin: 40px 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-bottom: 100px;
+  background-color: #fdbd58;
 }
 
-.layanan-content {
+.layanan img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.layanan ul {
+  list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
-.layanan-content img {
-  display: block;
-  height: 25px;
-  width: 25px;
-  aspect-ratio: auto 25/25;
-  object-fit: cover;
+
+.layanan li {
+  padding: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13pt;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 1;
 }
-.layanan-container p {
-  color: #576168 !important;
-  font-weight: 700 !important;
-  font-size: calc(1.3rem);
-}
-.layanan-container p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-.layanan-content p {
-  font-size: 1rem;
-  margin: 0;
-}
+
+
+/*----------------------------------------------------------------- 
+Mitra
+---------------------------------------------------------------- */
+
+
 
 /*----------------------------------------------------------------- 
 Style - Hubungi Kami - Content 
