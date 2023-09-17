@@ -1,4 +1,6 @@
-/* Style Global */
+/*-----------------------------------------------------------------
+Global
+-----------------------------------------------------------------*/
 
 html,
 body {
@@ -22,52 +24,6 @@ p {
   line-height: 30px;
   font-weight: 300;
   color: #afafaf;
-}
-
-/* Style Navbar */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 5px;
-  padding-right: 40px;
-  background-color: white;
-  position: fixed;
-  width: 100%;
-}
-
-.logo {
-  width: 100px;
-  height: 80px;
-  margin-left: 0px;
-  background-color: #0082e6;
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check {
-  display: none;
-}
-@media (max-width: 952px) {
-  .logo {
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a {
-    font-size: 16px;
-  }
-}
-
-/* Background */
-#background{
- background: url();
 }
 
 /*-----------------------------------------------------------------
@@ -119,24 +75,7 @@ Navigasi Bar
 }
 
 .nav-link:hover {
-  color: rgb(19,175,240);
-}
-
-.nav-linkgrub a {
-  display: inline-block;
-  padding: 10px 10px;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 13px;
-  background: rgb(19,175,240);
-  background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
-  border-radius: 5px;
-  letter-spacing: 0.3px;
-}
-
-.nav-linkgrub a:hover {
-  color: #fff;
-  background: rgb(91,104,235,1);
+  color: #fdbd58;
 }
 
 nav a {
@@ -145,13 +84,54 @@ nav a {
 }
 
 nav a.active {
-  color: rgb(19,175,240);
+  color: #fdbd58;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* .nav-linkgrub a {
+  display: inline-block;
+  padding: 10px 10px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 13px;
+  background: #fdbd58;
+  background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+}
+
+.nav-linkgrub a:hover {
+  color: #fff;
+  background: rgb(91,104,235,1);
+} */
 
 /* 
 -----------------------------------------------------------------
-Style - Tampilan Awal
+Style - Tampilan Awal (Home)
 ----------------------------------------------------------------- 
 */
 
@@ -159,7 +139,8 @@ Style - Tampilan Awal
   display: flex;
   align-items: center;
   padding: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  padding-bottom: 200px;
   background-color: #ffffff;
 }
 
@@ -261,76 +242,81 @@ Style - Tampilan - 3
 /*-----------------------------------------------------------------
 Promo 
 -----------------------------------------------------------------*/
+/* CSS untuk tampilan promo */
 .promo-container {
-  margin: auto;
-  padding: 120px 0;
-  background-color: #f0eeee;
-  margin-bottom: 50px;
   display: flex;
-}
-.promo-container h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding: 20px;
-  padding-bottom: 50px;
-  padding-left: 150px;
-  text-align: left;
-}
-.promo-content {
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 100px;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-bottom: 80px;
+  background-color: #fdbd58;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center; /* Mengatur konten agar bersebelahan vertikal */
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
 }
 
 .promo-image {
   flex: 1;
-  padding: 20px;
+  display: flex;
+  justify-content: center; /* Mengatur gambar agar berada di tengah horizontal */
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .promo-image img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 700px;
+  width: auto;
   height: auto;
-  border-radius: 15px;
-  display: block;
-  text-align: left;
+  object-fit: contain;
 }
 
 .promo-text {
   flex: 1;
+  text-align: left;
   padding: 20px;
 }
-
-.promo-text h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin: 0;
-}
-
 .promo-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  left: 30px;
-  color: #333;
+  font-size: 16pt;
+  color: #ffffff;
+}
+
+.promo-text h1 {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-text {
+    padding: 10px;
+  }
   
+  .promo-text h1 {
+    font-size: 1.5em;
+  }
 }
 
-.button-content {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
 
-.button-content:hover {
-  background-color: #0056b3;
-}
 
 /*-----------------------------------------------------------------
 Program
