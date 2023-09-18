@@ -28,90 +28,103 @@ p {
 /*-----------------------------------------------------------------
 Navigasi Bar
 -----------------------------------------------------------------*/
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 1200px;
+  padding: 10px 5px;
+  padding-right: 40px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
 }
 
-.navbar-logo {
+.logo {
   width: 150px;
-  height: auto;
+  height: 100px;
+  margin-left: 0px;
+  background-color: #fff;
 }
 
-.navbar-nav {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+nav {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
-.nav-item {
-  margin-right: 5px;
-  padding: 10px 10px;
+nav ul {
+  float: right;
+  margin-right: 20px;
+  align-items: center;
 }
-
-.nav-link {
-  text-decoration: none;
+nav ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+nav ul li a {
   color: #333;
-  transition: color 0.5s;
-}
-
-.nav-link:hover {
-  color: #fdbd58;
-}
-
-nav a {
-  color: #333;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-radius: 3px;
   text-decoration: none;
 }
-
-nav a.active {
+a.active,
+a:hover {
   color: #fdbd58;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .navbar {
+  .logo {
+    width: 100px;
     height: auto;
-    padding: 10px 0;
+    padding-left: 50px;
   }
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .checkbtn {
+    display: block;
   }
-
-  .navbar-logo {
-    margin-bottom: 20px;
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 80px;
+    left:-1200%;
+    text-align: center;
+    transition: all 0.5s;
   }
-
-  .navbar-nav {
-    flex-direction: column;
-    display: none;
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
   }
-
-  .nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
+  nav ul li a {
+    font-size: 20px;
+    color:#333;
   }
-
-  .navbar-nav.show {
-    display: flex;
+  a:hover,
+  a.active {
+    background: none;
+    color: 0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
   }
 }
 
@@ -301,33 +314,24 @@ Style - Card Program
   margin-top: 5px;
   font-size: 1rem;
 }
-
-.program-bottom {
-  font-weight: 300; 
-  padding-top: 50px; 
-  padding-bottom: 120px;
-  padding-right: 20px;
-  margin-right: 150px;
-  text-align: right;
-}
-
-.button-program a {
-  padding: 10px;
-  color: #fff;
-  text-transform: capitalize;
+.button-program{
+  border: none;
+  color: #FFF;
   font-size: 18px;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 8px 16px;
   background: #fdbd58;
   background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
+  margin: 14px;
+  cursor:pointer ;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
   letter-spacing: 0.3px;
 }
-
-.button-program a:hover {
+.button-program:hover {
   color: #fff;
   background: #ff9d00;
 }
-
 
 /*-----------------------------------------------------------------
 Layanan
@@ -493,7 +497,7 @@ textarea {
   font-weight: 500;
 }
 .submit-button {
-  background-color: #007bff; 
+  background-color: #fdbd58; 
   color: #ffffff; 
   font-size: 15px; 
   padding: 10px 20px; 
@@ -505,7 +509,7 @@ textarea {
   margin-left: 95px;
 }
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #ff9d00;
 }
 
 /*----------------------------------------------------------------- 

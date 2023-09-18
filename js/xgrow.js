@@ -11,10 +11,8 @@
   );
   const words = [
     "keterampilan",
-    "informatika",
-    "ekonomi",
-    "sistem informasi",
-    "manajemen",
+    "IT Skill",
+    "ekonomi digital",
   ];
   let currentWordIndex = 0;
   function changeWord() {
@@ -118,3 +116,4 @@ function changePromo() {
 
 // Atur interval untuk mengganti promo setiap 7 detik
 setInterval(changePromo, 7000);
+
