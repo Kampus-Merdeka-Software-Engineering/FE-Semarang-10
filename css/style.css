@@ -72,8 +72,13 @@ nav ul li a {
   border-radius: 3px;
   text-decoration: none;
 }
+<<<<<<< HEAD
 a.active,
 a:hover {
+=======
+
+nav a.aktif {
+>>>>>>> 557e3f7b9355784a9caff1715e80cc86704690cc
   color: #fdbd58;
   transition: 0.5s;
 }
@@ -164,7 +169,7 @@ Style - Tampilan Home
 .home-image img {
   max-width: 80%;
   border-radius: 15px;
-  border: 2px solid #000000;
+  border: 3px solid #000000;
   padding: 5px;
 }
 
@@ -173,12 +178,12 @@ Style - Tampilan Home
   overflow: hidden;
 }
 
-#home-fade-image {
+#imgHomeUbah {
   opacity: 0;
-  transition: opacity 2.5s ease-in-out;
+  transition: opacity 3.5s ease-in-out;
 }
 
-#home-fade-image.loaded {
+#imgHomeUbah.tampil {
   opacity: 1;
 }
 
@@ -210,12 +215,12 @@ Promo
   justify-content: center;
 }
 
-.fade-in {
+.fade-masuk {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 
-.fade-out {
+.fade-keluar {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -234,13 +239,23 @@ Promo
   padding: 20px;
 }
 .promo-text p {
-  font-size: 16pt;
-  color: #ffffff;
+  font-size: 12pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
 }
 
 .promo-text h1 {
-  font-size: 2em;
-  color: #ffffff;
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
 }
 
 @media (max-width: 768px) {

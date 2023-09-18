@@ -1,108 +1,130 @@
 
-// Fade respon img
-  document.addEventListener("DOMContentLoaded", function () {
-    var image = document.getElementById("home-fade-image");
-    image.classList.add("loaded");
-  });
+// Style JavaScript di buat oleh XGROW
 
-// Teks changing
-  const changingTextElement = document.getElementById(
-    "home-text-changing"
+// Function Navigasi Bar Smooth (Navbar) (Awal)
+document.querySelectorAll("nav a").forEach((tautan) => {
+  tautan.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href.startsWith("#")) {
+          e.preventDefault();
+          const idTujuan = href.substring(1);
+          const tujuan = document.getElementById(idTujuan);
+          
+          if (tujuan) {
+              tujuan.scrollIntoView({
+                  behavior: "smooth",
+              });
+          }
+      }
+  });
+});
+// Function Navigasi Bar Smooth (Navbar) (Akhir)
+
+
+// Href aktif di A (Navbar) (Awal)
+document.addEventListener("DOMContentLoaded", function () {
+  const bagian = document.querySelectorAll("section");
+  const tautanNavigasi = document.querySelectorAll("nav a");
+  tautanNavigasi[0].classList.add("aktif");
+
+  document.addEventListener("scroll", function () {
+    bagian.forEach((bagian) => {
+      const rect = bagian.getBoundingClientRect();
+      if (rect.top <= 50 && rect.bottom >= 50) {
+        const idBagian = bagian.getAttribute("id");
+        const tautanAktif = document.querySelector(
+          `nav a[href="#${idBagian}"]`
+        );
+        tautanNavigasi.forEach((tautan) => {
+          tautan.classList.remove("aktif");
+        });
+        tautanAktif.classList.add("aktif");
+      }
+    });
+  });
+});
+// Href aktif di A (Navbar) (Akhir)
+
+
+
+// Function Gambar (Home) (Awal)
+  document.addEventListener("DOMContentLoaded", function () {
+    var imgHome = document.getElementById("imgHomeUbah");
+    imgHome.classList.add("tampil");
+  });
+// Function Gambar (Home) (Akhir)
+
+
+// Function Ubah Teks (Home) (Awal)
+  const elemenUbahTeks = document.getElementById(
+    "teksHomeUbah"
   );
-  const words = [
+  const kataKunci = [
     "keterampilan",
     "IT Skill",
     "ekonomi digital",
   ];
-  let currentWordIndex = 0;
-  function changeWord() {
-    changingTextElement.textContent = words[currentWordIndex];
-    currentWordIndex = (currentWordIndex + 1) % words.length;
+  let indeksKataSaatIni = 0;
+  function ubahKata() {
+    elemenUbahTeks.textContent = kataKunci[indeksKataSaatIni];
+    indeksKataSaatIni = (indeksKataSaatIni + 1) % kataKunci.length;
   }
-  setInterval(changeWord, 4000);
-
-document.querySelectorAll("nav a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      const targetId = href.substring(1);
-      const target = document.getElementById(targetId);
-    
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    }
-  });
-});
+  setInterval(ubahKata, 4000);
+// Function Ubah Teks (Home) (Akhir)
 
 
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks[0].classList.add("active");
-  
-    document.addEventListener("scroll", function () {
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 50 && rect.bottom >= 50) {
-          const sectionId = section.getAttribute("id");
-          const activeLink = document.querySelector(
-            `nav a[href="#${sectionId}"]`
-          );
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-          });
-          activeLink.classList.add("active");
-        }
-      });
-    });
-  });
-  
+// Function Prome Teks (Promo) (Awal)
+  // - Variabel
+  const gambarPromosi = document.querySelector('.promo-image img');
+  const teksPromosi = document.querySelector('.promo-text');
+  const promosi = [
+    {
+      gambar: 'assets/img-promo/img-p2.png',
+      judul: 'PROMO NAIK KELAS',
+      deskripsi: 'Dengan menggunakan kode voucher GRUB10SMG, Anda akan mendapatkan potongan harga hingga 50% di tambah mode membaca modul hingga 300 hari, syarat dan ketentuan berlaku.',
+    },
+    {
+      gambar: 'assets/img-promo/img-p.png',
+      judul: 'PROMO KERJA KELOMPOK',
+      deskripsi: 'Anda hanya membayar 1 harga untuk 1 kelompok pembelajaran. Untuk mendapatkannya isi kode promo yang kami kirim di IG Story XGrow',
+    },
+    {
+      gambar: 'assets/img-promo/img-p4.png',
+      judul: '💡 TAHUKAH ANDA',
+      deskripsi: 'Setiap waktu yang Anda luangkan untuk belajar di XGrow adalah kontribusi Anda dalam membantu anak-anak untuk Merdeka Belajar, 85 Menit = 1 Buku.',
+    },
+    {
+      gambar: 'assets/img-promo/img-p3.png',
+      judul: 'XPRO - GROW',
+      deskripsi: 'Jika Anda suka membuat jurnal, konversikan untuk menjadi keuntungan harga. Kami akan menilai jurnal Anda, untuk mencapai 90% beasiswa karier Anda.',
+    },
+  ];
 
-  // Ambil elemen-elemen yang diperlukan
-const promoImage = document.querySelector('.promo-image img');
-const promoText = document.querySelector('.promo-text');
+  let indeksPromoSaatIni = 0;
 
-// Data promo (img dan teks)
-const promos = [
-  {
-    image: 'assets/img-promo/img-p.png',
-    title: 'PROMO KERJA KELOMPOK',
-    description: 'Anda hanya membayar 1 harga untuk 1 kelompok pembelajaran. Untuk mendapatkannya isi kode promo yang kami kirim di IG Story XGrow',
-  },
-  {
-    image: 'assets/img-promo/img-p2.png',
-    title: 'PROMO NAIK KELAS',
-    description: 'Dengan mengunakan kode voucher GRUB10SMG, Anda akan mendapatkan potongan harga hingga 50% di tambah mode membaca modul hingga 300hari, syarat dan ketentuan berlaku.',
-  },
-  {
-    image: 'assets/img-promo/img-p4.png',
-    title: 'TAHUKAH ANDA',
-    description: 'Setiap waktu yang di luangkan untuk belajar di XGrow adalah kontribusi Anda dalam membantu anak-anak untuk Merdeka Belajar, 85 Menit = 1 Buku.',
-  },
-  {
-    image: 'assets/img-promo/img-p3.png',
-    title: 'XPRO - GROW',
-    description: 'Jika Anda suka membuat jurnal, konversikan untuk menjadi keuntungan harga. Kami akan menilai jurnal Anda, untuk mencapai 90% beasiswa karir Anda.',
-  },
-];
+  // - Fungsi untuk mengganti teks promo
+  function gantiPromo() {
+    gambarPromosi.classList.remove('fade-masuk');
+    gambarPromosi.classList.add('fade-keluar');
+    teksPromosi.classList.remove('fade-masuk');
+    teksPromosi.classList.add('fade-keluar');
 
-let currentPromoIndex = 0;
+    setTimeout(() => {
+      indeksPromoSaatIni = (indeksPromoSaatIni + 1) % promosi.length;
 
-// Fungsi untuk mengganti promo
-function changePromo() {
-  promoImage.classList.remove('fade-in');
-  promoImage.classList.add('fade-out');
-  promoText.classList.remove('fade-in');
-  promoText.classList.add('fade-out');
+      gambarPromosi.src = promosi[indeksPromoSaatIni].gambar;
+      teksPromosi.querySelector('h1').textContent = promosi[indeksPromoSaatIni].judul;
+      teksPromosi.querySelector('p').textContent = promosi[indeksPromoSaatIni].deskripsi;
 
-  setTimeout(() => {
-    currentPromoIndex = (currentPromoIndex + 1) % promos.length;
+      gambarPromosi.classList.remove('fade-keluar');
+      gambarPromosi.classList.add('fade-masuk');
+      teksPromosi.classList.remove('fade-keluar');
+      teksPromosi.classList.add('fade-masuk');
+    }, 1000);
+  }
+  setInterval(gantiPromo, 6000);
 
+<<<<<<< HEAD
     promoImage.src = promos[currentPromoIndex].image;
     promoText.querySelector('h1').textContent = promos[currentPromoIndex].title;
     promoText.querySelector('p').textContent = promos[currentPromoIndex].description;
@@ -117,3 +139,6 @@ function changePromo() {
 // Atur interval untuk mengganti promo setiap 7 detik
 setInterval(changePromo, 7000);
 
+=======
+// Function Prome Teks (Promo) (Akhir)
+>>>>>>> 557e3f7b9355784a9caff1715e80cc86704690cc
