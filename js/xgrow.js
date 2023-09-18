@@ -61,8 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const kataKunci = [
     "keterampilan",
-    "IT Skill",
-    "ekonomi digital",
+    "informatika",
+    "ekonomi",
+    "sistem informasi",
+    "manajemen",
   ];
   let indeksKataSaatIni = 0;
   function ubahKata() {
@@ -124,21 +126,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   setInterval(gantiPromo, 6000);
 
-<<<<<<< HEAD
-    promoImage.src = promos[currentPromoIndex].image;
-    promoText.querySelector('h1').textContent = promos[currentPromoIndex].title;
-    promoText.querySelector('p').textContent = promos[currentPromoIndex].description;
-
-    promoImage.classList.remove('fade-out');
-    promoImage.classList.add('fade-in');
-    promoText.classList.remove('fade-out');
-    promoText.classList.add('fade-in');
-  }, 1000);
-}
-
-// Atur interval untuk mengganti promo setiap 7 detik
-setInterval(changePromo, 7000);
-
-=======
 // Function Prome Teks (Promo) (Akhir)
->>>>>>> 557e3f7b9355784a9caff1715e80cc86704690cc
