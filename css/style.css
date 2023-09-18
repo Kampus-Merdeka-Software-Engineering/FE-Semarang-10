@@ -133,8 +133,7 @@ nav a.aktif {
   .checkbtn {
     display: block;
   }
-  a:hover,
-  a.active {
+  nav a.aktif {
     background: none;
     color: #fdbd58;
   }
@@ -337,28 +336,21 @@ Style - Card Program
   font-size: 1rem;
 }
 
-.program-bottom {
-  font-weight: 300;
-  padding-top: 50px;
-  padding-bottom: 120px;
-  padding-right: 20px;
-  margin-right: 150px;
-  text-align: right;
-}
-
-.button-program a {
-  padding: 10px;
-  color: #fff;
-  text-transform: capitalize;
+.button-program{
+  border: none;
+  color: #FFF;
   font-size: 18px;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 8px 16px;
   background: #fdbd58;
   background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
+  margin: 14px;
+  cursor:pointer ;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
   letter-spacing: 0.3px;
 }
-
-.button-program a:hover {
+.button-program:hover {
   color: #fff;
   background: #ff9d00;
 }
@@ -526,7 +518,7 @@ textarea {
   font-weight: 500;
 }
 .submit-button {
-  background-color: #007bff;
+  background-color: #fdbd58;
   color: #ffffff;
   font-size: 15px;
   padding: 10px 20px;
@@ -538,7 +530,7 @@ textarea {
   margin-left: 95px;
 }
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #ff9d00;
 }
 
 /*----------------------------------------------------------------- 
