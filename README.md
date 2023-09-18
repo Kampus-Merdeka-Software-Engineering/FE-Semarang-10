@@ -3,8 +3,8 @@
 
 # XGrow - Situs Belajar Online
 
-Selamat datang di repositori web XGrow! XGrow adalah platform belajar online yang didedikasikan untuk meningkatkan keterampilan dan pengetahuan pengguna dalam berbagai bidang edukasi. 
-Kami adalah bagian dari Grub10 Section Semarang dan kami bangga merancang dan membangun untuk memberikan layanan pendidikan berkualitas kepada pengguan.
+Selamat datang di repositori web XGrow! XGrow adalah platform belajar online yang didedikasikan untuk meningkatkan keterampilan dan pengetahuan pengguna dalam berbagai bidang edukasi. <br>
+Kami adalah bagian dari Grub10 Section Semarang dan kami bangga merancang dan membangun untuk memberikan layanan pendidikan berkualitas kepada pengguna.
 
 ## 🖥 Teknologi yang Digunakan
 XGrow dibangun menggunakan berbagai teknologi, termasuk:
@@ -23,7 +23,8 @@ XGrow dibangun menggunakan berbagai teknologi, termasuk:
 - **Kontribusi Sosial**: Kami berusaha merancang agar setiap pembelajar di XGrow juga berarti pengguna membantu anak-anak untuk Merdeka Belajar.
 
 ## 🕹 Cara Menggunakan
-Buka situs pada link berikut : https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/
+Buka situs pada link berikut : <br>
+https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/
 
 ## ✌ Tim Pengembangan
 XGrow adalah proyek yang dibangun dengan konsentrasi dan harapan besar oleh tim Grub10 Section Semarang. Terima kasih kepada semua kontributor yang telah berpartisipasi dalam pengembangan situs ini.
