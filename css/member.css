@@ -118,10 +118,9 @@ a:hover {
     font-size: 20px;
     color:#333;
   }
-  a:hover,
-  a.active {
+  nav a.aktif {
     background: none;
-    color: 0082e6;
+    color: #fdbd58;
   }
   #check:checked ~ ul {
     left: 0;

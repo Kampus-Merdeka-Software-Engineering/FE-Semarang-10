@@ -14,7 +14,12 @@ body {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -84,37 +89,59 @@ nav a {
 nav a.aktif {
   color: #fdbd58;
 }
-
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
 @media (max-width: 768px) {
-  .navbar {
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .navbar-logo {
     margin-bottom: 20px;
   }
-
   .navbar-nav {
-    flex-direction: column;
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 80px;
+    left: -120%;
+    text-align: center;
+    transition: all 0.5s;
+    display: block;
+    list-style-type: disc;
   }
 
   .nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
   }
 
-  .navbar-nav.show {
-    display: flex;
+  .nav-link{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color:#333;
+  }
+  .checkbtn {
+    display: block;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #fdbd58;
+  }
+  #check:checked ~ ul {
+    left: 0;
   }
 }
-
 
 /* -----------------------------------------------------------------
 Style - Tampilan Home
@@ -169,7 +196,6 @@ Style - Tampilan Home
   opacity: 1;
 }
 
-
 /*-----------------------------------------------------------------
 Promo 
 -----------------------------------------------------------------*/
@@ -186,7 +212,7 @@ Promo
 
 .promo-content {
   display: flex;
-  align-items: center; 
+  align-items: center;
   max-width: 1200px;
   width: 100%;
 }
@@ -249,20 +275,19 @@ Promo
   .promo-text {
     padding: 10px;
   }
-  
+
   .promo-text h1 {
     font-size: 1.5em;
   }
 }
-
 
 /* -----------------------------------------------------------------
 Style - Card Program
 ----------------------------------------------------------------- */
 .program h1 {
   font-size: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 300;  
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
   padding: 150px;
   padding-bottom: 20px;
   padding-left: 150px;
@@ -270,9 +295,9 @@ Style - Card Program
 
 .program-2 h1 {
   font-size: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 300; 
-  padding-top: 50px; 
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  padding-top: 50px;
   padding-bottom: 20px;
   padding-left: 150px;
 }
@@ -313,8 +338,8 @@ Style - Card Program
 }
 
 .program-bottom {
-  font-weight: 300; 
-  padding-top: 50px; 
+  font-weight: 300;
+  padding-top: 50px;
   padding-bottom: 120px;
   padding-right: 20px;
   margin-right: 150px;
@@ -337,7 +362,6 @@ Style - Card Program
   color: #fff;
   background: #ff9d00;
 }
-
 
 /*-----------------------------------------------------------------
 Layanan
@@ -368,7 +392,7 @@ Layanan
 
 .layanan li {
   padding: 15px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 13pt;
   border: 2px solid #000000;
   background-color: #ffffff;
@@ -378,14 +402,13 @@ Layanan
   flex: 1;
 }
 
-
 /*----------------------------------------------------------------- 
 Mitra
 ---------------------------------------------------------------- */
 /* Style untuk judul */
 .mitra-judul h1 {
-  font-size: 32px; 
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   text-align: center;
   padding: 80px;
@@ -489,26 +512,26 @@ textarea {
   border-radius: 5px;
   margin-top: 10px;
 }
-.hubungi-container{
+.hubungi-container {
   width: 60%;
   text-align: center;
   padding: 20px;
-  margin-top: 10px;  
+  margin-top: 10px;
   font-size: large;
 }
-.information{
+.information {
   text-align: center;
   color: #000000;
   margin-top: 10px;
   font-weight: 500;
 }
 .submit-button {
-  background-color: #007bff; 
-  color: #ffffff; 
-  font-size: 15px; 
-  padding: 10px 20px; 
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   font-weight: bold;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -563,7 +586,7 @@ footer {
 .footerBottom p {
   color: white;
 }
-.designer{
+.designer {
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 1px;
