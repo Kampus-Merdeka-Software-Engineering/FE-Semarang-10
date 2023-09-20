@@ -149,7 +149,6 @@ Style - Tampilan Home
   display: flex;
   align-items: center;
   padding: 150px;
-  padding-bottom: 150px;
   background-color: #ffffff;
 }
 
@@ -194,6 +193,17 @@ Style - Tampilan Home
 #imgHomeUbah.tampil {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .home{
+    padding: 150px 0;
+  }
+  .home-text h1 {
+    font-size: 36px;
+  }
+  .home-text p {
+    font-size: 14px;
+  }
+}
 
 /*-----------------------------------------------------------------
 Promo 
@@ -202,10 +212,7 @@ Promo
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
-  padding-top: 100px;
-  padding-left: 150px;
-  padding-bottom: 80px;
+  padding: 100px 100px 80px 150px;
   background-color: #fdbd58;
 }
 
@@ -266,6 +273,9 @@ Promo
 }
 
 @media (max-width: 768px) {
+  .promo-container{
+    padding: 100px 10px;
+  }
   .promo-content {
     flex-direction: column;
     text-align: center;
@@ -324,6 +334,7 @@ Style - Card Program
   max-width: 100%;
   height: 150px;
   border-radius: 8px;
+  border: 3px solid #000000;
 }
 
 .kartu-program h2 {
@@ -361,10 +372,8 @@ Layanan
 .layanan {
   justify-content: center;
   align-items: center;
-  padding: 100px;
-  padding-top: 100px;
+  padding: 100px ;
   padding-left: 150px;
-  padding-bottom: 100px;
   background-color: #fdbd58;
 }
 
@@ -394,6 +403,12 @@ Layanan
   flex: 1;
 }
 
+@media (max-width: 768px) {
+  .layanan{
+    padding: 100px 10px;
+  }
+  
+}
 /*----------------------------------------------------------------- 
 Mitra
 ---------------------------------------------------------------- */
@@ -526,96 +541,54 @@ textarea {
   cursor: pointer;
   font-weight: bold;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-left: 95px;
 }
 .submit-button:hover {
   background-color: #ff9d00;
 }
 
+
+
 /*----------------------------------------------------------------- 
-Style - Footer - Content 
+Footer
 ---------------------------------------------------------------- */
 footer {
-  background-color: #111;
-  width: 100%;
-  margin-top: 80px;
-}
-.footer-container {
-  width: 100%;
-  padding: 70px 30px 20px;
-}
-.socialicons {
-  display: flex;
-  justify-content: center;
-}
-.socialicons a {
-  text-decoration: none;
-  padding: 10px;
-  background-color: white;
-  margin: 10px;
-  border-radius: 50%;
-}
-.socialicons a {
-  font-size: 2em;
-  color: black;
-  opacity: 0.9;
-}
-.socialicons a:hover {
-  background-color: #111;
-  transition: 0.5s;
-}
-.socialicons a:hover {
-  color: white;
-  transition: 0.5s;
-}
-
-.footerBottom {
-  background-color: #000;
-  padding: 0;
   text-align: center;
-}
-.footerBottom p {
-  color: white;
-}
-.designer {
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
-}
+  padding:  0;
+  background-color: #333;
 
-/*----------------------------------------------------------------- 
-Footer Cadangan 
----------------------------------------------------------------- */
-/* .footer {
-  background-color: #fdbd58;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
 }
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #333;
+  height: 100px;
 }
-.footer-icon {
-  font-size: 24px;
+.socialicons {
   margin: 0 10px;
+  height: 24px;
 }
 
-.footer-icon a{
-  color: #ffffff;
-  text-decoration: none
-}
-
-.fa {
+.socialicons a{
   font-size: inherit;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: rgba(255,255,255,.05);
+  border-radius: 1000px;
+  overflow: hidden;
 }
-
+.footerBottom {
+  background-color: #333;
+  padding: 0;
+  text-align: center;
+  border-top: 1px solid #fff;
+}
 .copyright {
-  margin-top: 20px;
+  margin: 0;
   text-decoration: none;
 }
 .copyright a {
@@ -625,9 +598,10 @@ Footer Cadangan
 }
 
 @media screen and (max-width: 768px) {
+
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-} */
+}
