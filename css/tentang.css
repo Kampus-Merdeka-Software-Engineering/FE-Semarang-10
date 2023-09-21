@@ -142,104 +142,31 @@ nav a.aktif {
   }
 }
 
-/* -----------------------------------------------------------------
-Style - Tampilan Home
------------------------------------------------------------------ */
-.home {
-  display: flex;
-  align-items: center;
-  padding: 150px;
-  background-color: #ffffff;
-}
-
-.home-text {
-  flex: 1;
-  padding: 20px;
-}
-
-.home-text h1 {
-  font-size: 42px;
-  font-weight: 100;
-  margin: 0;
-}
-
-.home-text p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.home-image {
-  max-width: 50%;
-  padding: 20px;
-}
-
-.home-image img {
-  max-width: 80%;
-  border-radius: 15px;
-  border: 3px solid #000000;
-  padding: 5px;
-}
-
-.home-image {
-  position: relative;
-  overflow: hidden;
-}
-
-#imgHomeUbah {
-  opacity: 0;
-  transition: opacity 3.5s ease-in-out;
-}
-
-#imgHomeUbah.tampil {
-  opacity: 1;
-}
-@media (max-width: 768px) {
-  .home{
-    padding: 150px 0;
-  }
-  .home-text h1 {
-    font-size: 36px;
-  }
-  .home-text p {
-    font-size: 14px;
-  }
-}
-
 /*-----------------------------------------------------------------
-Promo 
+Tentang 
 -----------------------------------------------------------------*/
-.promo-container {
+.tentang-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 100px 80px 150px;
+  padding: 250px 100px 80px 150px;
   background-color: #fdbd58;
 }
 
-.promo-content {
+.tentang-content {
   display: flex;
   align-items: center;
   max-width: 1200px;
   width: 100%;
 }
 
-.promo-image {
+.tentang-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.fade-masuk {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-keluar {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.promo-image img {
+.tentang-image img {
   max-width: 100%;
   max-height: 700px;
   width: auto;
@@ -247,22 +174,22 @@ Promo
   object-fit: contain;
 }
 
-.promo-text {
+.tentang-text {
   flex: 1;
   text-align: left;
   padding: 20px;
 }
-.promo-text p {
-  font-size: 12pt;
+.tentang-text p {
+  font-size: 11pt;
   font-family: "Plus Jakarta Sans", sans-serif;
-  padding: 15px;
+  padding: 20px;
   background-color: #ffffff;
   border: 2.5px solid #000000;
   border-radius: 10px;
   color: #000000;
 }
 
-.promo-text h1 {
+.tentang-text h1 {
   font-size: 22pt;
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 15px;
@@ -273,228 +200,153 @@ Promo
 }
 
 @media (max-width: 768px) {
-  .promo-container{
+  .tentang-container{
     padding: 100px 10px;
   }
-  .promo-content {
+  .tentang-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .promo-text {
+  .tentang-text {
     padding: 10px;
   }
 
-  .promo-text h1 {
+  .tentang-text h1 {
     font-size: 1.5em;
   }
 }
 
-/* -----------------------------------------------------------------
-Style - Card Program
------------------------------------------------------------------ */
-.program h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding: 150px;
-  padding-bottom: 20px;
-  padding-left: 150px;
-}
-
-.program-2 h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  padding-left: 150px;
-}
-
-.program-container {
+/*-----------------------------------------------------------------
+Misi 
+-----------------------------------------------------------------*/
+.misi-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 0 10px;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.kartu-program {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-}
-
-.kartu-program img {
-  max-width: 100%;
-  height: 150px;
-  border-radius: 8px;
-  border: 3px solid #000000;
-}
-
-.kartu-program h2 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-}
-
-.kartu-program p {
-  margin-top: 5px;
-  font-size: 1rem;
-}
-
-.button-program{
-  border: none;
-  color: #FFF;
-  font-size: 18px;
-  padding: 8px 16px;
-  background: #fdbd58;
-  background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
-  margin: 14px;
-  cursor:pointer ;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-}
-.button-program:hover {
-  color: #fff;
-  background: #ff9d00;
-}
-
-/*-----------------------------------------------------------------
-Layanan
------------------------------------------------------------------*/
-.layanan {
-  justify-content: center;
-  align-items: center;
-  padding: 100px ;
-  padding-left: 150px;
+  padding: 0px 100px 150px 150px;
   background-color: #fdbd58;
 }
 
-.layanan img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
-.layanan ul {
-  list-style: none;
-  padding: 0;
+.misi-content {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.layanan li {
-  padding: 15px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 13pt;
-  border: 2px solid #000000;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .layanan{
-    padding: 100px 10px;
-  }
-  
-}
-/*----------------------------------------------------------------- 
-Mitra
----------------------------------------------------------------- */
-/* Style untuk judul */
-.mitra-judul h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  padding: 80px;
-  padding-top: 120px;
-  padding-bottom: 30px;
-}
-
-.mitra-container {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 50px;
-  box-sizing: border-box;
-}
-
-.mitra-img {
-  flex: 1;
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
   width: 100%;
 }
 
-.mitra-img img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.mitra-icon {
+.misi-image {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  background-color: #fdbd58;
 }
 
-.mitra-icon i {
-  font-size: 50px;
-  color: #ffffff;
+.misi-image img {
+  max-width: 100%;
+  max-height: 500px;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
-  .mitra-judul h1 {
-    font-size: 18px;
+.misi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+
+.misi-text p {
+  font-size: 11pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .misi-container{
+    padding: 100px 10px;
+  }
+  .misi-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .misi-text {
     padding: 10px;
   }
 
-  .mitra-container {
-    max-width: 100%;
+  .misi-text h1 {
+    font-size: 1.5em;
   }
+}
 
-  .mitra-img {
-    flex: 1;
-    margin: 10px;
-    text-align: center;
-    display: flex;
+
+/*-----------------------------------------------------------------
+Visi 
+-----------------------------------------------------------------*/
+.visi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px 0px 150px;
+  background-color: #fdbd58;
+}
+
+.visi-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.visi-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.visi-image img {
+  max-width: 100%;
+  max-height: 500px;
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+}
+
+.visi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+
+.visi-text p {
+  font-size: 12pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .visi-container{
+    padding: 100px 10px;
+  }
+  .visi-content {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    text-align: center;
   }
 
-  .mitra-icon {
-    width: 60px;
-    height: 60px;
+  .visi-text {
+    padding: 10px;
   }
 
-  .mitra-icon i {
-    font-size: 24px;
+  .visi-text h1 {
+    font-size: 1.5em;
   }
 }
 
