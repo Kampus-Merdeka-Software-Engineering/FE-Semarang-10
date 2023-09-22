@@ -501,54 +501,65 @@ Mitra
 /*----------------------------------------------------------------- 
 Style - Hubungi Kami - Content 
 ---------------------------------------------------------------- */
-form {
+/* Styling container untuk form */
+.kontak {
   display: flex;
-  flex-direction: column;
-  margin-left: 95px;
-  margin-top: 5px;
-}
-label {
-  font-weight: bold;
-}
-input[type="text"],
-textarea {
-  width: 40%;
-  padding: 10px;
-  margin-bottom: 2px;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-.hubungi-container {
-  width: 60%;
-  text-align: center;
-  padding: 20px;
-  margin-top: 10px;
-  font-size: large;
-}
-.information {
-  text-align: center;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: 500;
-}
-.submit-button {
+  justify-content: center;
+  align-items: center;
+  padding: 100px ;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding-left: 150px;
   background-color: #fdbd58;
-  color: #ffffff;
-  font-size: 15px;
+}
+
+.card-kontak {
+  width: 300px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  height: 400px;
+  width: 750px;
+  box-shadow: #fdbd58;
+}
+
+.form-kontak {
+  margin-bottom: 10px;
+}
+
+.card-kontak h1 {
+  font-size: 32px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.form-kontak label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.form-kontak input[type="text"],
+.form-kontak input[type="email"],
+.form-kontak input[type="pesan"]{
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  background-color: #fdbd58;
+  color: #fff;
   padding: 10px 20px;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  margin-left: 95px;
 }
-.submit-button:hover {
+
+.btn-submit:hover {
   background-color: #ff9d00;
 }
-
-
 
 /*----------------------------------------------------------------- 
 Footer

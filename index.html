@@ -90,7 +90,7 @@
             </div>
   
             <div class="kartu-program">
-              <img src="assets/img/data analyst and science.jpg" alt="Image" />
+              <img src="assets/img/website development.jpg" alt="Image" />
               <h2>Website Dev</h2>
               <p> Kuasai skill untuk menjadi <br> pengembang website <br> profesional  40+ pertemuan. </p>
               <button class="button-program">Daftar Sekarang</button>
@@ -196,26 +196,35 @@
     <!-- Mitra (Akhir)-->
 
     <!-- Kontak (Awal)  -->
-    <section id="hubungi">
-        <div class="hubungi-container">
-            <h1>HUBUNGI KAMI</h1>
-            <p class="information">HUBUNGI KAMI DAN KAMI AKAN KEMBALI KEPADA ANDA</p>
-        </div>
-        <div class="contact-form">
+    <section id="kontak">
+      <div class="kontak">
+        <div class="card-kontak">
+            <h1>Kirim Pesan</h1>
             <form>
-                <label for="nama">Nama :</label>
-                <input type="text" id="nama" name="nama" required >
-                <br>
-                <label for="pertanyaan">Pertanyaan :</label>
-                <textarea id="pertanyaan" name="pertanyaan" rows="4" required></textarea>
-                <br><br>
+                <div class="form-kontak">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div class="form-kontak">
+                    <label for="subjek">Subjek:</label>
+                    <input type="text" id="subjek" name="subjek" required>
+                </div>
+                <div class="form-kontak">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-kontak">
+                  <label for="pesan">Pesan:</label>
+                  <input type="pesan" id="pesan" name="pesan" required>
+              </div>
+                <button type="submit" class="btn-submit">Kirim</button>
             </form>
         </div>
-        <div> <button class="submit-button">Submit</button> </div>   
+      </div> 
     </section>
     <!-- Kontak (Akhir)  -->
 
-    <!-- Footer -->
+    <!-- Footer (Awal)-->
     <footer>
       <div class="footer-container">
         <div class="socialicons">
@@ -230,8 +239,8 @@
       <div class="footerBottom">
         <p class="copyright">Copyright &copy;2023; Designed by <span class="designer">Group 10 Semarang</span></p>
       </div>
-  </footer>
-  <!-- Footer -->
+    </footer>
+    <!-- Footer (Akhir)-->
 
     <!-- JavaScript -->
     <script src="js/xgrow.js"></script>
