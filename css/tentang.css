@@ -351,69 +351,21 @@ Visi
 }
 
 /*----------------------------------------------------------------- 
-Style - Hubungi Kami - Content 
----------------------------------------------------------------- */
-form {
-  display: flex;
-  flex-direction: column;
-  margin-left: 95px;
-  margin-top: 5px;
-}
-label {
-  font-weight: bold;
-}
-input[type="text"],
-textarea {
-  width: 40%;
-  padding: 10px;
-  margin-bottom: 2px;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-.hubungi-container {
-  width: 60%;
-  text-align: center;
-  padding: 20px;
-  margin-top: 10px;
-  font-size: large;
-}
-.information {
-  text-align: center;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: 500;
-}
-.submit-button {
-  background-color: #fdbd58;
-  color: #ffffff;
-  font-size: 15px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  margin-left: 95px;
-}
-.submit-button:hover {
-  background-color: #ff9d00;
-}
-
-/*----------------------------------------------------------------- 
 Footer
 ---------------------------------------------------------------- */
 footer {
   text-align: center;
   padding:  0;
-  background-color: #333;
+  background-color: #ddb41f;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 
 }
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #ddb41f;
   height: 100px;
 }
 .socialicons {
@@ -423,28 +375,33 @@ footer {
 
 .socialicons a{
   font-size: inherit;
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   margin-right: 10px;
   padding: 10px;
-  background-color: rgba(255,255,255,.05);
+  background-color: #fff;
   border-radius: 1000px;
   overflow: hidden;
 }
+.socialicons a:hover {
+  background-color: #ddb41f;
+  transition: 0.5s;
+}
+.socialicons a:hover {
+  color: white;
+  transition: 0.5s;
+}
 .footerBottom {
-  background-color: #333;
+  background-color: #ddb41f;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #000;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
-}
-.copyright a {
+  color:#000;
   font-size: 12pt;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

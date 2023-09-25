@@ -696,14 +696,26 @@ Pesan PopUp
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
-
+@media screen and (max-width:768px) {
+  .kontak-container{
+    padding: 80px 20px 50px 20px;
+  }
+  .form-kontak h2 {
+    padding: 40px;
+    padding-bottom: 10px;
+  }
+  .kontak-con{
+    padding: 40px;
+    padding-top: 10px;
+  }
+}
 /*----------------------------------------------------------------- 
 Footer
 ---------------------------------------------------------------- */
 footer {
   text-align: center;
   padding:  0;
-  background-color: #333;
+  background-color: #ddb41f;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   z-index: 1;
@@ -712,7 +724,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #ddb41f;
   height: 100px;
 }
 .socialicons {
@@ -722,29 +734,36 @@ footer {
 
 .socialicons a{
   font-size: inherit;
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   margin-right: 10px;
   padding: 10px;
-  background-color: rgba(255,255,255,.05);
+  background-color: #fff;
   border-radius: 1000px;
   overflow: hidden;
 }
+.socialicons a:hover {
+  background-color: #ddb41f;
+  transition: 0.5s;
+}
+.socialicons a:hover {
+  color: white;
+  transition: 0.5s;
+}
 .footerBottom {
-  background-color: #333;
+  background-color: #ddb41f;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #000;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
+  color:#000;
   padding-bottom: 50px;
 }
 .copyright a {
   font-size: 12pt;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

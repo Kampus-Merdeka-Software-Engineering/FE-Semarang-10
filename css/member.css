@@ -212,7 +212,7 @@ img {
 }
 
 .grid button:hover {
-  background-color: #555;
+  background-color: #fc9b00;
 }
 
 /*----------------------------------------------------------------- 
@@ -221,14 +221,16 @@ Footer
 footer {
   text-align: center;
   padding:  0;
-  background-color: #333;
+  background-color: #ddb41f;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 
 }
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #ddb41f;
   height: 100px;
 }
 .socialicons {
@@ -238,28 +240,33 @@ footer {
 
 .socialicons a{
   font-size: inherit;
-  color: #ffffff;
+  color: #000;
   text-decoration: none;
   margin-right: 10px;
   padding: 10px;
-  background-color: rgba(255,255,255,.05);
+  background-color: #fff;
   border-radius: 1000px;
   overflow: hidden;
 }
+.socialicons a:hover {
+  background-color: #ddb41f;
+  transition: 0.5s;
+}
+.socialicons a:hover {
+  color: white;
+  transition: 0.5s;
+}
 .footerBottom {
-  background-color: #333;
+  background-color: #ddb41f;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #000;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
-}
-.copyright a {
+  color:#000;
   font-size: 12pt;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
