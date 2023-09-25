@@ -196,7 +196,6 @@
     <!-- Mitra (Akhir)-->
 
     <!-- Kontak (Awal)  -->
-
     <section id="kontak">
       <div class="kontak-container">
 
@@ -211,18 +210,17 @@
         </div>
       
         <div class="form-kontak" id="formKontak">
-            <h2>Kontak Kami</h2>
-            <form class="kontak-con">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama"><br><br>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="pesan">Pesan:</label><br>
-                <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Kirim">
-            </form>
-        </div>
-
+          <h2>Kontak Kami</h2>
+          <form class="kontak-con" id="myForm">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama"><br><br>
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email"><br><br>
+              <label for="pesan">Pesan:</label><br>
+              <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br><br>
+              <input type="submit" value="Kirim" onclick="kirimForm(event)">
+          </form>
+      </div>
         <div class="form-kontak" id="formBerlangganan">
             <h2>Berlangganan</h2>
             <form class="kontak-con">
@@ -235,6 +233,12 @@
       </div>
     </section>
     <!-- Kontak (Akhir)  -->
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p id="popupMessage">Pesan</p>
+        <button onclick="tutupPopup()">Oke, tutup</button>
+    </div>
 
     <!-- Footer (Awal)-->
     <footer>
@@ -256,6 +260,7 @@
 
     <!-- JavaScript -->
     <script src="js/xgrow.js"></script>
+    <script src="js/APIxgrow.js"></script>
 
   </body>
 </html>
