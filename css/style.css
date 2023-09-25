@@ -430,7 +430,7 @@ Mitra
   max-width: 70%;
   margin: 0 auto;
   padding: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   box-sizing: border-box;
 }
 
@@ -457,7 +457,7 @@ Mitra
   align-items: center;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 2px solid #000000;
   background-color: #fdbd58;
 }
@@ -620,6 +620,35 @@ Kontak
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .kontak-judul h1 {
+    font-size: 24px;
+    padding: 30px;
+  }
+  .kontak-container {
+    padding: 80px;
+  }
+  .kontak-pilihan-container {
+    height: auto;
+  }
+  .ikon {
+    font-size: 18px;
+  }
+  .divider {
+    height: 20px;
+  }
+  .form-kontak {
+    margin: 20px;
+  }
+  .form-kontak h2 {
+    font-size: 18px;
+    padding: 30px 0;
+  }
+  .form-kontak label {
+    font-size: 14px;
+  }
+}
+
 /*----------------------------------------------------------------- 
 Pesan PopUp
 ---------------------------------------------------------------- */
@@ -689,7 +718,7 @@ footer {
   background-color: #ddb41f;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-
+  z-index: 1;
 }
 .footer-container {
   display: flex;
@@ -731,6 +760,9 @@ footer {
   margin: 0;
   text-decoration: none;
   color:#000;
+  padding-bottom: 50px;
+}
+.copyright a {
   font-size: 12pt;
 }
 
@@ -740,5 +772,35 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+
+/*----------------------------------------------------------------- 
+Infoberita
+---------------------------------------------------------------- */
+.infoberita {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  height: 30px;
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+#marquee-container{
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .infoberita {
+      position: static; 
+      background-color: #333;
+      text-align: center;
   }
 }
