@@ -196,31 +196,43 @@
     <!-- Mitra (Akhir)-->
 
     <!-- Kontak (Awal)  -->
+
     <section id="kontak">
-      <div class="kontak">
-        <div class="card-kontak">
-            <h1>Kirim Pesan</h1>
-            <form>
-                <div class="form-kontak">
-                    <label for="nama">Nama:</label>
-                    <input type="text" id="nama" name="nama" required>
-                </div>
-                <div class="form-kontak">
-                    <label for="subjek">Subjek:</label>
-                    <input type="text" id="subjek" name="subjek" required>
-                </div>
-                <div class="form-kontak">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-kontak">
-                  <label for="pesan">Pesan:</label>
-                  <input type="pesan" id="pesan" name="pesan" required>
-              </div>
-                <button type="submit" class="btn-submit">Kirim</button>
+      <div class="kontak-container">
+
+        <div class="kontak-judul">
+          <h1>Kontak & Berlangganan</h1>
+        </div>
+
+        <div class="kontak-pilihan-container">
+          <div class="ikon" id="tampilFormKontak"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Kontak</div>
+          <div class="divider"></div>
+          <div class="ikon" id="tampilFormBerlangganan"><i class="fa-solid fa-star"></i>&nbsp;&nbsp; Berlangganan</div>
+        </div>
+      
+        <div class="form-kontak" id="formKontak">
+            <h2>Kontak Kami</h2>
+            <form class="kontak-con">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama"><br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Kirim">
             </form>
         </div>
-      </div> 
+
+        <div class="form-kontak" id="formBerlangganan">
+            <h2>Berlangganan</h2>
+            <form class="kontak-con">
+              <label for="email">Isi email Anda untuk berlangganan info dari kami:</label>
+              <input type="text" id="email" name="email"><br><br>
+              <input type="submit" value="Berlangganan">
+            </form>
+        </div>
+
+      </div>
     </section>
     <!-- Kontak (Akhir)  -->
 

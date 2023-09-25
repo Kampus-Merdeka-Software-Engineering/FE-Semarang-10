@@ -412,7 +412,6 @@ Layanan
 /*----------------------------------------------------------------- 
 Mitra
 ---------------------------------------------------------------- */
-/* Style untuk judul */
 .mitra-judul h1 {
   font-size: 32px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -499,67 +498,128 @@ Mitra
 }
 
 /*----------------------------------------------------------------- 
-Style - Hubungi Kami - Content 
+Kontak
 ---------------------------------------------------------------- */
-/* Styling container untuk form */
-.kontak {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px ;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  padding-left: 150px;
-  background-color: #fdbd58;
-}
 
-.card-kontak {
-  width: 300px;
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  padding: 20px;
-  height: 400px;
-  width: 750px;
-  box-shadow: #fdbd58;
-}
-
-.form-kontak {
-  margin-bottom: 10px;
-}
-
-.card-kontak h1 {
+.kontak-judul h1 {
   font-size: 32px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   text-align: center;
+  padding: 80px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.kontak-container {
+  justify-content: center;
+  align-items: center;
+  padding: 150px ;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background-color: #fdbd58;
+}
+
+.kontak-pilihan-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.ikon {
+  width: 50%;
+  font-size: 22px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+
+.divider {
+  width: 5px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50px;
+  margin: 0 10px;
+}
+
+.form-kontak {
+  background-color: #ffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+  width: auto;
+  border-radius: 12px;
+  margin: 50px;
+  border: 2px solid #000;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-kontak.aktif {
+  max-height: 700px;
+}
+
+.form-kontak h2 {
+  font-size: 22px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  text-align: left;
+  padding: 80px;
+  padding-bottom: 10px;
 }
 
 .form-kontak label {
+  font-size: 15px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.kontak-con{
+  padding: 80px;
+  padding-top: 10px;
 }
 
 .form-kontak input[type="text"],
 .form-kontak input[type="email"],
-.form-kontak input[type="pesan"]{
+.form-kontak textarea,
+.form-kontak input[type="date"],
+.form-kontak input[type="time"] {
   width: 100%;
-  padding: 5px;
-  border: 2px solid #000000;
-  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
 }
 
-.btn-submit {
+.form-kontak input[type="submit"] {
   background-color: #fdbd58;
-  color: #fff;
+  float: right;
+  color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.btn-submit:hover {
-  background-color: #ff9d00;
+.form-kontak input[type="submit"]:hover {
+  background-color: #fc9b00;
 }
+
+#formBerlangganan {
+  background-color: #ffff;
+}
+
+#formKontak {
+  background-color: #ffff;
+}
+
+.form-kontak + .form-kontak {
+  margin-top: 20px;
+}
+
 
 /*----------------------------------------------------------------- 
 Footer
@@ -568,6 +628,8 @@ footer {
   text-align: center;
   padding:  0;
   background-color: #333;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 
 }
 .footer-container {

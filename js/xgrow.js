@@ -127,3 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(gantiPromo, 6000);
 
 // Function Prome Teks (Promo) (Akhir)
+
+// Kontak toggle (Kontak) (Awal)
+  const tampilFormKontakTombol = document.getElementById('tampilFormKontak');
+  const tampilFormBerlanggananTombol = document.getElementById('tampilFormBerlangganan');
+  const formKontak = document.getElementById('formKontak');
+  const formBerlangganan = document.getElementById('formBerlangganan');
+
+    function aktifkanFormKontak() {
+        formKontak.classList.add('aktif');
+        formBerlangganan.classList.remove('aktif');
+    }
+
+    function aktifkanFormBerlangganan() {
+        formBerlangganan.classList.add('aktif');
+        formKontak.classList.remove('aktif');
+    }
+
+  tampilFormKontakTombol.addEventListener('click', aktifkanFormKontak);
+  tampilFormBerlanggananTombol.addEventListener('click', aktifkanFormBerlangganan);
+
+  window.addEventListener('load', aktifkanFormKontak);
+// Kontak toggle (Kontak) (Akhir)
