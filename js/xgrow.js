@@ -125,8 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
   setInterval(gantiPromo, 6000);
-
-// Function Prome Teks (Promo) (Akhir)
+// Function Promo Teks (Promo) (Akhir)
 
 // Kontak toggle (Kontak) (Awal)
   const tampilFormKontakTombol = document.getElementById('tampilFormKontak');
@@ -138,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
         formKontak.classList.add('aktif');
         formBerlangganan.classList.remove('aktif');
     }
-
     function aktifkanFormBerlangganan() {
         formBerlangganan.classList.add('aktif');
         formKontak.classList.remove('aktif');
