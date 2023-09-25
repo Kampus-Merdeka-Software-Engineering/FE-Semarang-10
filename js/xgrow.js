@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     elemenUbahTeks.textContent = kataKunci[indeksKataSaatIni];
     indeksKataSaatIni = (indeksKataSaatIni + 1) % kataKunci.length;
   }
-  setInterval(ubahKata, 4000);
+  setInterval(ubahKata, 3000);
 // Function Ubah Teks (Home) (Akhir)
 
 
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       teksPromosi.classList.add('fade-masuk');
     }, 1000);
   }
-  setInterval(gantiPromo, 6000);
+  setInterval(gantiPromo, 5000);
 // Function Promo Teks (Promo) (Akhir)
 
 // Kontak toggle (Kontak) (Awal)

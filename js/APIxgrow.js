@@ -86,3 +86,23 @@ function tutupPopup() {
     overlay.style.display = "none";
 }
 // Fungsi untuk menampilkan tutup pesan PopUp (Akhir)
+
+// Fungsi untuk menampilkan Info Berita (Awal)
+const apiUrl = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/infoberita';
+
+async function fetchData() {
+  const kontainerMarquee = document.getElementById('marquee-container');
+  kontainerMarquee.textContent = 'Sedang mengambil data...';
+  try {
+    const respons = await fetch(apiUrl);
+    const data = await respons.json();
+    const namaList = data.map(item => item.nama).join('  💠  ');
+    kontainerMarquee.innerHTML = `<marquee>${namaList}</marquee>`;
+  } catch (error) {
+    console.error('Kesalahan data:', error);
+    kontainerMarquee.textContent = 'Terjadi kesalahan saat mengambil data.';
+  }
+}
+
+fetchData();
+// Fungsi untuk menampilkan Info Berita (Akhir)
