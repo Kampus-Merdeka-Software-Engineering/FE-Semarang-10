@@ -96,8 +96,8 @@ async function fetchData() {
   try {
     const respons = await fetch(apiUrl);
     const data = await respons.json();
-    const namaList = data.map(item => item.nama).join('  💠  ');
-    kontainerMarquee.innerHTML = `<marquee>${namaList}</marquee>`;
+    const beritaList = data.map(item => `(${item.tanggal}) ${item.berita} `).join('  🌐  ');
+    kontainerMarquee.innerHTML = `<marquee>${beritaList}</marquee>`;
   } catch (error) {
     console.error('Kesalahan data:', error);
     kontainerMarquee.textContent = 'Terjadi kesalahan saat mengambil data.';
