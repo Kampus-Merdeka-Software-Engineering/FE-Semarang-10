@@ -194,12 +194,98 @@ Style - Tampilan Home
 @media (max-width: 768px) {
   .home{
     padding: 150px 0;
+    padding-bottom: 200px;
   }
   .home-text h1 {
     font-size: 36px;
   }
   .home-text p {
     font-size: 14px;
+  }
+}
+
+/*-----------------------------------------------------------------
+Card Data Home
+-----------------------------------------------------------------*/
+.data-home {
+  width: 800px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 785px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.data-item {
+  padding: 0px;
+  border-right: 1px solid #ccc;
+}
+
+.data-item:last-child {
+  border-right: none;
+}
+
+.data-home h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+.data-home p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fdbd58;
+}
+
+
+@media (max-width: 920px) {
+  .home{
+    padding-bottom: 350px;
+  }
+  .promo-container{
+    padding-top: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-home {
+      max-width: 80%;
+      font-size: 11px;
+      max-height: 50%;
+      padding: 10px;
+      grid-template-columns: 1fr 1fr;
+  }
+  .home{
+    padding-bottom: 350px;
+  }
+  .promo-container{
+    padding-top: 350px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .data-home {
+      max-width: 80%;
+      padding: 10px;
+      max-height: 50%;
+      font-size: 11px;
+      grid-template-columns: 1fr;
+  }
+  .home{
+    padding-bottom: 350px;
+  }
+  .promo-container{
+    padding-top: 350px;
   }
 }
 
