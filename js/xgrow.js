@@ -130,6 +130,37 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(gantiPromo, 7000);
 // Function Promo Teks (Promo) (Akhir)
 
+// - Fungsi untuk card slide (program) (Awal)
+const buttonSebelumnya = document.getElementById("buttonSebelumnya");
+const buttonSelanjutnya = document.getElementById("buttonSelanjutnya");
+const kontainer = document.querySelector(".section-tengah");
+let jumlahGeser = 0;
+const lebarKartu = 720;
+
+buttonSebelumnya.addEventListener("click", () => {
+    jumlahGeser -= lebarKartu;
+    if (jumlahGeser < 0) {
+        jumlahGeser = 0;
+    }
+    kontainer.scroll({
+        top: 0,
+        left: jumlahGeser,
+        behavior: "smooth",
+    });
+});
+buttonSelanjutnya.addEventListener("click", () => {
+    jumlahGeser += lebarKartu;
+    if (jumlahGeser > kontainer.scrollWidth - kontainer.clientWidth) {
+        jumlahGeser = kontainer.scrollWidth - kontainer.clientWidth;
+    }
+    kontainer.scroll({
+        top: 0,
+        left: jumlahGeser,
+        behavior: "smooth",
+    });
+});
+// - Fungsi untuk card slide (program) (Akhir)
+
 // Kontak toggle (Kontak) (Awal)
   const tampilFormKontakTombol = document.getElementById('tampilFormKontak');
   const tampilFormBerlanggananTombol = document.getElementById('tampilFormBerlangganan');
@@ -150,3 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('load', aktifkanFormKontak);
 // Kontak toggle (Kontak) (Akhir)
+
+
+
