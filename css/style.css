@@ -31,6 +31,19 @@ p {
   color: #afafaf;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  height: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fdbd58;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 /*-----------------------------------------------------------------
 Navigasi Bar
 -----------------------------------------------------------------*/
@@ -952,7 +965,9 @@ footer {
 Infoberita
 ---------------------------------------------------------------- */
 .infoberita {
-  background-color: #fff;
+  background-color: #fdbd58;
+  border-top-right-radius: 75px;
+  border-top-left-radius: 75px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -960,8 +975,8 @@ Infoberita
   padding-bottom: 10px;
   height: 30px;
   font-size: 13px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   font-family: "Plus Jakarta Sans", sans-serif;
-
 }
 #marquee-container{
   padding: 10px;
