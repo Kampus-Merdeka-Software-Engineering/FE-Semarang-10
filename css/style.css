@@ -916,8 +916,6 @@ footer {
   text-decoration: none;
   color:#000;
   padding-bottom: 50px;
-}
-.copyright a {
   font-size: 12pt;
 }
 
@@ -927,6 +925,9 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .copyright {
+    padding-bottom: 10px;
   }
 }
 
