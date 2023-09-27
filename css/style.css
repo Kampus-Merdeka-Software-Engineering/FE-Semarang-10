@@ -426,7 +426,7 @@ Style - Card Program
   right: 0;
 }
 .kartu {
-  width: 230px;
+  width: 250px;
   height: 400px;
   background-color: #fdbd58;
   border: 1px solid #ccc;
@@ -448,7 +448,8 @@ Style - Card Program
 .kartu h2 {
   font-size: 17px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: #fdbd58;
+  background-color: #ffff;
+  padding: 15px;
   color: #000;
   
 }
@@ -456,11 +457,10 @@ Style - Card Program
 .kartu p {
   font-size: 12px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #000;
-  text-align:justify;
-  line-height: 1.2; 
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #000000;
+  line-height: 1.5; 
 }
 
 .kartu button {
