@@ -547,12 +547,11 @@ Layanan
 }
 
 .layanan li {
-  padding: 15px;
+  padding: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 13pt;
-  border: 2px solid #000000;
+  font-size: 15px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-right: 10px;
   margin-bottom: 10px;
   flex: 1;
