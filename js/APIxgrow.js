@@ -39,7 +39,6 @@ function kirimFormBerlangganan(event) {
 
     const form = document.getElementById("berlanggananForm");
     const email = document.getElementById("emailBerlangganan").value;
-
     const data = {
         email: email
     };
@@ -103,6 +102,5 @@ async function fetchData() {
     kontainerMarquee.textContent = 'Terjadi kesalahan saat mengambil data.';
   }
 }
-
 fetchData();
 // Fungsi untuk menampilkan Info Berita (Akhir)
