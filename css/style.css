@@ -12,6 +12,7 @@ body {
   list-style: none;
   box-sizing: border-box;
   outline: none;
+  overflow-x: hidden;
 }
 
 h1,
@@ -458,6 +459,7 @@ Style - Card Program
   padding-left: 15px;
   padding-right: 15px;
   color: #000;
+  text-align:justify;
   line-height: 1.2; 
 }
 
@@ -531,6 +533,8 @@ Layanan
   padding: 100px ;
   padding-left: 150px;
   background-color: #fdbd58;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5%;
 }
 
 .layanan img {
