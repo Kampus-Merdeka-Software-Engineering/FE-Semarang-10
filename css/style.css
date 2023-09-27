@@ -449,6 +449,7 @@ Style - Card Program
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #fdbd58;
   color: #000;
+  
 }
 
 .kartu p {
@@ -573,7 +574,21 @@ Mitra
   text-align: center;
   padding: 80px;
   padding-top: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative; 
+}
+.mitra-judul h1::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #fdbd58;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .mitra-container {
@@ -583,7 +598,7 @@ Mitra
   flex-wrap: wrap;
   max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2%;
   padding-bottom: 150px;
   box-sizing: border-box;
 }
@@ -612,13 +627,11 @@ Mitra
   width: 100px;
   height: 100px;
   border-radius: 10%;
-  border: 2px solid #000000;
-  background-color: #fdbd58;
 }
 
 .mitra-icon i {
-  font-size: 50px;
-  color: #ffffff;
+  font-size: 80px;
+  color: #fdbd58;
 }
 
 @media screen and (max-width: 768px) {
