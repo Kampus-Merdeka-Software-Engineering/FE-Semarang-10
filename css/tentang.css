@@ -353,55 +353,45 @@ Visi
 /*----------------------------------------------------------------- 
 Footer
 ---------------------------------------------------------------- */
-footer {
-  text-align: center;
-  padding:  0;
-  background-color: #ddb41f;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-
-}
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddb41f;
+  background-color: #fff;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   height: 100px;
 }
-.socialicons {
-  margin: 0 10px;
-  height: 24px;
-}
-
 .socialicons a{
   font-size: inherit;
-  color: #000;
+  color: #fff;
   text-decoration: none;
-  margin-right: 10px;
   padding: 10px;
-  background-color: #fff;
-  border-radius: 1000px;
-  overflow: hidden;
+  border-radius: 100px;
+  background-color: #fdbd58;
 }
 .socialicons a:hover {
-  background-color: #ddb41f;
+  background-color: #ffa30f;
   transition: 0.5s;
 }
 .socialicons a:hover {
-  color: white;
+  color: #fff;
   transition: 0.5s;
 }
 .footerBottom {
-  background-color: #ddb41f;
+  background-color: #fff;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #000;
+  border-top: 2px solid #fdbd58;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
-  color:#000;
-  font-size: 12pt;
+  color:#000000;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 768px) {
@@ -410,5 +400,39 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .copyright {
+    padding-bottom: 10px;
+  }
+}
+
+/*----------------------------------------------------------------- 
+Infoberita
+---------------------------------------------------------------- */
+.infoberita {
+  background-color: #fdbd58;
+  border-top-right-radius: 75px;
+  border-top-left-radius: 75px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  height: 30px;
+  font-size: 13px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+#marquee-container{
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .infoberita {
+      position: static; 
+      background-color: #333;
+      text-align: center;
   }
 }

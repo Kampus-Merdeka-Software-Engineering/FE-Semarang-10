@@ -702,6 +702,9 @@ Kontak
   padding-top: 80px;
   padding-bottom: 50px;
   background-color: #fdbd58;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 20px;
 }
 
 .kontak-pilihan-container  {
@@ -896,56 +899,45 @@ Pesan PopUp
 /*----------------------------------------------------------------- 
 Footer
 ---------------------------------------------------------------- */
-footer {
-  text-align: center;
-  padding:  0;
-  background-color: #ddb41f;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  z-index: 1;
-}
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddb41f;
+  background-color: #fff;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   height: 100px;
 }
-.socialicons {
-  margin: 0 10px;
-  height: 24px;
-}
-
 .socialicons a{
   font-size: inherit;
-  color: #000;
+  color: #fff;
   text-decoration: none;
-  margin-right: 10px;
   padding: 10px;
-  background-color: #fff;
-  border-radius: 1000px;
-  overflow: hidden;
+  border-radius: 100px;
+  background-color: #fdbd58;
 }
 .socialicons a:hover {
-  background-color: #ddb41f;
+  background-color: #ffa30f;
   transition: 0.5s;
 }
 .socialicons a:hover {
-  color: white;
+  color: #fff;
   transition: 0.5s;
 }
 .footerBottom {
-  background-color: #ddb41f;
+  background-color: #fff;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #000;
+  border-top: 2px solid #fdbd58;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
-  color:#000;
+  color:#000000;
+  padding-top: 10px;
   padding-bottom: 50px;
-  font-size: 12pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 768px) {
