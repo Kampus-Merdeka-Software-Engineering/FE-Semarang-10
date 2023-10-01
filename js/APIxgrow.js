@@ -6,7 +6,6 @@ function kirimForm(event) {
     const nama = document.getElementById("nama").value;
     const email = document.getElementById("email").value;
     const pesan = document.getElementById("pesan").value;
-
     const data = {
         nama: nama,
         email: email,
@@ -36,7 +35,6 @@ function kirimForm(event) {
 // Fungsi untuk kirim form berlangganan (Kontak) (Awal)
 function kirimFormBerlangganan(event) {
     event.preventDefault();
-
     const form = document.getElementById("berlanggananForm");
     const email = document.getElementById("emailBerlangganan").value;
     const data = {
@@ -81,6 +79,7 @@ function tampilkanPopup(pesan) {
 function tutupPopup() {
     const popup = document.getElementById("popup");
     const overlay = document.getElementById("overlay");
+    
     popup.style.display = "none";
     overlay.style.display = "none";
 }
@@ -107,7 +106,7 @@ fetchData();
 
 // Fungsi untuk menampilkan data home (Awal)
 const dataHomeUrl = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/datahome';
-    async function fetchDataHome() {
+async function fetchDataHome() {
     try {
         const response = await fetch(dataHomeUrl);
         const data = await response.json();
@@ -121,6 +120,59 @@ const dataHomeUrl = 'https://back-end-capstone-project-section-semarang-group-10
     } catch (error) {
         console.error('Kesalahan data home:', error);
     }
-    }
+}
 fetchDataHome();
 // Fungsi untuk menampilkan data home (Akhir)
+
+// Fungsi untuk menampilkan data program unggulan (Awal)
+const urlUnggulan = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan';
+const kontainerKartu = document.getElementById('kartu-container');
+async function ambilDataDanTampilkanKartu() {
+  try {
+    const respons = await fetch(urlUnggulan);
+    const data = await respons.json();
+    for (let i = 0; i < Math.min(data.length, 10); i++) {
+      const item = data[i];
+      const kartu = document.createElement('div');
+      kartu.classList.add('kartu');
+      kartu.innerHTML = `
+        <img src="assets/img/produk manajemen.jpeg" alt="${item.judul}" />
+        <h2>${item.judul}</h2>
+        <p>${item.keterangan}</p>
+        <button>Tambah Kursus</button>
+      `;
+      kontainerKartu.appendChild(kartu);
+    }
+  } catch (error) {
+    console.error('Kesalahan data unggulan:', error);
+  }
+}
+ambilDataDanTampilkanKartu();
+// Fungsi untuk menampilkan data program unggulan (Akhir)
+
+// Fungsi untuk menampilkan data program baru (Awal)
+const urlPbaru = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru';
+const kontainerKartuPbaru = document.getElementById('kartu-container-pbaru');
+async function ambilDataDanTampilkanKartuPbaru() {
+  try {
+    const respons = await fetch(urlPbaru);
+    const dataPbaru = await respons.json();
+    for (let i = 0; i < Math.min(dataPbaru.length, 10); i++) {
+      const itemPbaru = dataPbaru[i];
+      const kartuPbaru = document.createElement('div');
+      kartuPbaru.classList.add('kartu');
+      kartuPbaru.innerHTML = `
+        <img src="assets/img/produk manajemen.jpeg" alt="${itemPbaru.judul}" />
+        <h2>${itemPbaru.judul}</h2>
+        <p>${itemPbaru.keterangan}</p>
+        <button>Tambah Kursus</button>
+      `;
+      kontainerKartuPbaru.appendChild(kartuPbaru);
+    }
+  } catch (error) {
+    console.error('Kesalahan data pbaru:', error);
+  }
+}
+ambilDataDanTampilkanKartuPbaru();
+// Fungsi untuk menampilkan data program baru (Akhir)
+
