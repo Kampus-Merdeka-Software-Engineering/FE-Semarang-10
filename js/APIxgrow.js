@@ -104,3 +104,23 @@ async function fetchData() {
 }
 fetchData();
 // Fungsi untuk menampilkan Info Berita (Akhir)
+
+// Fungsi untuk menampilkan data home (Awal)
+const dataHomeUrl = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/datahome';
+    async function fetchDataHome() {
+    try {
+        const response = await fetch(dataHomeUrl);
+        const data = await response.json();
+        if (data.length > 0) {
+        const dataItem = data[0];
+        document.getElementById('jumlahPengguna').textContent = dataItem.pengguna;
+            document.getElementById('jumlahMentor').textContent = dataItem.mentor;
+            document.getElementById('jumlahAlumni').textContent = dataItem.alumni;
+            document.getElementById('keberhasilanBelajar').textContent = dataItem.keberhasilan;
+        }
+    } catch (error) {
+        console.error('Kesalahan data home:', error);
+    }
+    }
+fetchDataHome();
+// Fungsi untuk menampilkan data home (Akhir)
