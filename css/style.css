@@ -103,6 +103,11 @@ nav a {
 nav a.aktif {
   color: #fdbd58;
 }
+
+.a-aktif {
+  color: #fdbd58;
+}
+
 .checkbtn {
   font-size: 30px;
   color: black;
@@ -981,5 +986,289 @@ Infoberita
       position: static; 
       background-color: #333;
       text-align: center;
+  }
+}
+
+
+
+/*-----------------------------------------------------------------
+----- Tentang.html -----
+-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------
+Tentang 
+-----------------------------------------------------------------*/
+.tentang-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 100px 80px 150px;
+  background-color: #fdbd58;
+}
+
+.tentang-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.tentang-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tentang-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+
+.tentang-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.tentang-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.tentang-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .tentang-container{
+    padding: 100px 10px;
+  }
+  .tentang-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tentang-text {
+    padding: 10px;
+  }
+
+  .tentang-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*-----------------------------------------------------------------
+Misi 
+-----------------------------------------------------------------*/
+.misi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 200px 100px 200px;
+
+}
+
+.misi-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.misi-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.misi-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.misi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+
+.misi-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #fdbd58;
+  border-radius: 5px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .misi-container{
+    padding: 100px 10px;
+  }
+  .misi-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .misi-text {
+    padding: 10px;
+  }
+
+  .misi-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+/*-----------------------------------------------------------------
+Visi 
+-----------------------------------------------------------------*/
+.visi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px 50px 200px;
+
+}
+
+.visi-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.visi-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.visi-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.visi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+
+.visi-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #fdbd58;
+  border-radius: 5px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .visi-container{
+    padding: 100px 10px;
+  }
+  .visi-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .visi-text {
+    padding: 10px;
+  }
+
+  .visi-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*-----------------------------------------------------------------
+Sejarah
+-----------------------------------------------------------------*/
+.sejarah-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 150px;
+  background-color: #fdbd58;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.sejarah-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.sejarah-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sejarah-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+
+.sejarah-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.sejarah-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.sejarah-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .sejarah-container{
+    padding: 100px 10px;
+  }
+  .sejarah-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sejarah-text {
+    padding: 10px;
+  }
+
+  .sejarah-text h1 {
+    font-size: 1.5em;
   }
 }
