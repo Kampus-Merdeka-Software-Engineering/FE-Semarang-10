@@ -91,7 +91,7 @@ const apiUrl = 'https://back-end-capstone-project-section-semarang-group-10.bima
 
 async function fetchData() {
   const kontainerMarquee = document.getElementById('marquee-container');
-  kontainerMarquee.textContent = 'Sedang mengambil data...';
+  kontainerMarquee.textContent = 'Mohon tunggu, sedang memproses pengambilan data...';
   try {
     const respons = await fetch(apiUrl);
     const data = await respons.json();

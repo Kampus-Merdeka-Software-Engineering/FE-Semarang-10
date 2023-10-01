@@ -695,8 +695,8 @@ Kontak
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   text-align: center;
-  padding: 80px;
-  padding-top: 70px;
+  padding: 50px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -704,8 +704,8 @@ Kontak
   justify-content: center;
   align-items: center;
   padding: 150px ;
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 120px;
+  padding-bottom: 100px;
   background-color: #fdbd58;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -716,7 +716,13 @@ Kontak
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
+  width: auto;
+  border-radius: 10px;
+  margin: 50px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: #ffff;
+  padding: 30px;
 }
 
 .ikon {
@@ -729,7 +735,7 @@ Kontak
 }
 
 .divider {
-  width: 5px;
+  width: 3px;
   height: 30px;
   background-color: #000;
   border-radius: 50px;
@@ -742,11 +748,10 @@ Kontak
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
   width: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 50px;
-  border: 2px solid #000;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
-}
+  margin-top: 10px;
+  }
 
 .form-kontak.aktif {
   max-height: 700px;
