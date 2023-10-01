@@ -127,16 +127,17 @@ fetchDataHome();
 // Fungsi untuk menampilkan data program unggulan (Awal)
 const urlUnggulan = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan';
 const kontainerKartu = document.getElementById('kartu-container');
+
 async function ambilDataDanTampilkanKartu() {
   try {
     const respons = await fetch(urlUnggulan);
-    const data = await respons.json();
+    const data = await respons.json(); 
     for (let i = 0; i < Math.min(data.length, 10); i++) {
       const item = data[i];
       const kartu = document.createElement('div');
       kartu.classList.add('kartu');
       kartu.innerHTML = `
-        <img src="assets/img/produk manajemen.jpeg" alt="${item.judul}" />
+        <img src="${item.gambar}" alt="${item.judul}" />
         <h2>${item.judul}</h2>
         <p>${item.keterangan}</p>
         <button>Tambah Kursus</button>
@@ -147,12 +148,14 @@ async function ambilDataDanTampilkanKartu() {
     console.error('Kesalahan data unggulan:', error);
   }
 }
+
 ambilDataDanTampilkanKartu();
 // Fungsi untuk menampilkan data program unggulan (Akhir)
 
 // Fungsi untuk menampilkan data program baru (Awal)
 const urlPbaru = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru';
 const kontainerKartuPbaru = document.getElementById('kartu-container-pbaru');
+
 async function ambilDataDanTampilkanKartuPbaru() {
   try {
     const respons = await fetch(urlPbaru);
@@ -162,7 +165,7 @@ async function ambilDataDanTampilkanKartuPbaru() {
       const kartuPbaru = document.createElement('div');
       kartuPbaru.classList.add('kartu');
       kartuPbaru.innerHTML = `
-        <img src="assets/img/produk manajemen.jpeg" alt="${itemPbaru.judul}" />
+        <img src="${itemPbaru.gambar}" alt="${itemPbaru.judul}" />
         <h2>${itemPbaru.judul}</h2>
         <p>${itemPbaru.keterangan}</p>
         <button>Tambah Kursus</button>
