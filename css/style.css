@@ -541,7 +541,14 @@ Style - Card Program
   justify-content: flex-start;
   align-items: center;
 }
-
+@media (max-width: 768px){
+  .section-kiri{
+    padding-left: 50px;
+  }
+  .section-kanan{
+    padding-right: 50px;
+  }
+}
 /*-----------------------------------------------------------------
 Layanan
 -----------------------------------------------------------------*/
