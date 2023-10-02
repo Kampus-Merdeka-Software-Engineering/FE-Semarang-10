@@ -25,9 +25,12 @@ document.querySelectorAll("nav a").forEach((tautan) => {
 document.addEventListener("DOMContentLoaded", function () {
   const bagian = document.querySelectorAll("section");
   const tautanNavigasi = document.querySelectorAll("nav a");
-  tautanNavigasi[0].classList.add("aktif");
-
-  document.addEventListener("scroll", function () {
+  function hapusKelasAktif() {
+    tautanNavigasi.forEach((tautan) => {
+      tautan.classList.remove("aktif");
+    });
+  }
+  function tentukanTautanNavigasiAktif() {
     bagian.forEach((bagian) => {
       const rect = bagian.getBoundingClientRect();
       if (rect.top <= 50 && rect.bottom >= 50) {
@@ -35,15 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const tautanAktif = document.querySelector(
           `nav a[href="#${idBagian}"]`
         );
-        tautanNavigasi.forEach((tautan) => {
-          tautan.classList.remove("aktif");
-        });
+        hapusKelasAktif();
         tautanAktif.classList.add("aktif");
       }
     });
+  }
+  tentukanTautanNavigasiAktif();
+  document.addEventListener("scroll", function () {
+    tentukanTautanNavigasiAktif();
   });
 });
 // Href aktif di A (Navbar) (Akhir)
+
 
 // Function Gambar (Home) (Awal)
   document.addEventListener("DOMContentLoaded", function () {
@@ -104,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
       deskripsi: 'Gunakan kode voucer “XGROWDEV” dan dapatkan potongan harga hingga 50%, khusus untuk pilihan bidan pemrigraman. Promo ini dapat digunakan 2 kali pada masa pembelajaran, selama kelas masih tersedia. Syarat dan ketentuan berlaku. ',
     },
   ];
-
   let indeksPromoSaatIni = 0;
 
   // - Fungsi untuk mengganti teks promo
@@ -116,11 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       indeksPromoSaatIni = (indeksPromoSaatIni + 1) % promosi.length;
-
       gambarPromosi.src = promosi[indeksPromoSaatIni].gambar;
       teksPromosi.querySelector('h1').textContent = promosi[indeksPromoSaatIni].judul;
       teksPromosi.querySelector('p').textContent = promosi[indeksPromoSaatIni].deskripsi;
-
       gambarPromosi.classList.remove('fade-keluar');
       gambarPromosi.classList.add('fade-masuk');
       teksPromosi.classList.remove('fade-keluar');
@@ -131,34 +134,33 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function Promo Teks (Promo) (Akhir)
 
 // - Fungsi untuk card slide (program) (Awal)
-const buttonSebelumnya = document.getElementById("buttonSebelumnya");
-const buttonSelanjutnya = document.getElementById("buttonSelanjutnya");
-const kontainer = document.querySelector(".section-tengah");
-let jumlahGeser = 0;
-const lebarKartu = 720;
-
-buttonSebelumnya.addEventListener("click", () => {
-    jumlahGeser -= lebarKartu;
-    if (jumlahGeser < 0) {
-        jumlahGeser = 0;
-    }
-    kontainer.scroll({
-        top: 0,
-        left: jumlahGeser,
-        behavior: "smooth",
-    });
-});
-buttonSelanjutnya.addEventListener("click", () => {
-    jumlahGeser += lebarKartu;
-    if (jumlahGeser > kontainer.scrollWidth - kontainer.clientWidth) {
-        jumlahGeser = kontainer.scrollWidth - kontainer.clientWidth;
-    }
-    kontainer.scroll({
-        top: 0,
-        left: jumlahGeser,
-        behavior: "smooth",
-    });
-});
+  const buttonSebelumnya = document.getElementById("buttonSebelumnya");
+  const buttonSelanjutnya = document.getElementById("buttonSelanjutnya");
+  const kontainer = document.querySelector(".section-tengah");
+  let jumlahGeser = 0;
+  const lebarKartu = 720;
+  buttonSebelumnya.addEventListener("click", () => {
+      jumlahGeser -= lebarKartu;
+      if (jumlahGeser < 0) {
+          jumlahGeser = 0;
+      }
+      kontainer.scroll({
+          top: 0,
+          left: jumlahGeser,
+          behavior: "smooth",
+      });
+  });
+  buttonSelanjutnya.addEventListener("click", () => {
+      jumlahGeser += lebarKartu;
+      if (jumlahGeser > kontainer.scrollWidth - kontainer.clientWidth) {
+          jumlahGeser = kontainer.scrollWidth - kontainer.clientWidth;
+      }
+      kontainer.scroll({
+          top: 0,
+          left: jumlahGeser,
+          behavior: "smooth",
+      });
+  });
 // - Fungsi untuk card slide (program) (Akhir)
 
 // Kontak toggle (Kontak) (Awal)
@@ -166,7 +168,6 @@ buttonSelanjutnya.addEventListener("click", () => {
   const tampilFormBerlanggananTombol = document.getElementById('tampilFormBerlangganan');
   const formKontak = document.getElementById('formKontak');
   const formBerlangganan = document.getElementById('formBerlangganan');
-
     function aktifkanFormKontak() {
         formKontak.classList.add('aktif');
         formBerlangganan.classList.remove('aktif');
@@ -175,10 +176,8 @@ buttonSelanjutnya.addEventListener("click", () => {
         formBerlangganan.classList.add('aktif');
         formKontak.classList.remove('aktif');
     }
-
   tampilFormKontakTombol.addEventListener('click', aktifkanFormKontak);
   tampilFormBerlanggananTombol.addEventListener('click', aktifkanFormBerlangganan);
-
   window.addEventListener('load', aktifkanFormKontak);
 // Kontak toggle (Kontak) (Akhir)
 
