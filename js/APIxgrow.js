@@ -165,15 +165,6 @@ async function ambilDataDanTampilkanKartu() {
 ambilDataDanTampilkanKartu();
 // Fungsi untuk menampilkan data program unggulan (Akhir)
 
-// Fungsi untuk link ke pendataan program unggulan (Awal)
-kontainerKartu.addEventListener('click', (event) => {
-  if (event.target.classList.contains('tambah-kursus')) {
-    const idKursus = event.target.getAttribute('data-id');
-    window.location.href = `pendataan.html?id=${idKursus}`;
-  }
-});
-// Fungsi untuk link ke pendataan program unggulan (Akhir)
-
 // Fungsi untuk menampilkan data program baru (Awal)
 const urlPbaru = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru';
 const kontainerKartuPbaru = document.getElementById('kartu-container-pbaru');
@@ -190,7 +181,7 @@ async function ambilDataDanTampilkanKartuPbaru() {
         <img src="${itemPbaru.gambar}" alt="${itemPbaru.judul}" />
         <h2>${itemPbaru.judul}</h2>
         <p>${itemPbaru.keterangan}</p>
-        <button>Tambah Kursus</button>
+        <button class="tambah-kursus-pbaru" datap2-id="${itemPbaru.id}">Tambah Kursus</button>
       `;
       kontainerKartuPbaru.appendChild(kartuPbaru);
     }
@@ -200,4 +191,17 @@ async function ambilDataDanTampilkanKartuPbaru() {
 }
 ambilDataDanTampilkanKartuPbaru();
 // Fungsi untuk menampilkan data program baru (Akhir)
+
+// Fungsi untuk link ke pendataan program unggulan (Awal)
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('tambah-kursus')) {
+    const idKursus = event.target.getAttribute('data-id');
+    window.location.href = `pendataan.html?id=${idKursus}&jenis=unggulan`;
+  } else if (event.target.classList.contains('tambah-kursus-pbaru')) {
+    const idKursus = event.target.getAttribute('datap2-id');
+    window.location.href = `pendataan.html?id=${idKursus}&jenis=pbaru`;
+  }
+});
+// Fungsi untuk link ke pendataan program unggulan (Akhir)
+
 

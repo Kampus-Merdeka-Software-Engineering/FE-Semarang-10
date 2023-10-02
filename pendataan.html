@@ -110,29 +110,42 @@
     <script src="js/xgrow.js"></script>
     <script src="js/APIxgrow.js"></script>
     <script>
-      async function tampilkanDataKursus() {
-      const idKursus = new URLSearchParams(window.location.search).get("id");
-      if (!idKursus) {
-        console.error("ID kursus tidak ditemukan dalam parameter URL.");
-        return;
-      }
-      const urlKursus = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan/${idKursus}`;
-      try {
-          const respons = await fetch(urlKursus);
-          const dataKursus = await respons.json();
-          if (dataKursus && dataKursus[0]) { // Perhatikan bahwa dataKursus adalah array
-            document.getElementById("idKursus").value = dataKursus[0].id;
-            document.getElementById("judul").value = dataKursus[0].judul;
-            document.getElementById("keterangan").value = dataKursus[0].keterangan;
-          } else {
-            console.error("Data kursus tidak lengkap.");
+      document.addEventListener('DOMContentLoaded', () => {
+        async function tampilkanDataKursus() {
+          const idKursus = new URLSearchParams(window.location.search).get("id");
+          const jenisKursus = new URLSearchParams(window.location.search).get("jenis");
+          if (!idKursus || !jenisKursus) {
+            console.error("ID kursus atau jenis kursus tidak ditemukan dalam parameter URL.");
+            return;
           }
-        } catch (error) {
-          console.error("Kesalahan data kursus:", error);
+          let apiUrl;
+          if (jenisKursus === "unggulan") {
+            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan/${idKursus}`;
+          } else if (jenisKursus === "pbaru") {
+            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru/${idKursus}`;
+          } else {
+            console.error("Jenis kursus tidak valid.");
+            return;
+          }
+          try {
+            const response = await fetch(apiUrl);
+            const dataKursus = await response.json();
+    
+            if (dataKursus && dataKursus[0]) {
+              document.getElementById("idKursus").value = dataKursus[0].id;
+              document.getElementById("judul").value = dataKursus[0].judul;
+              document.getElementById("keterangan").value = dataKursus[0].keterangan;
+            } else {
+              console.error("Data kursus tidak lengkap.");
+            }
+          } catch (error) {
+            console.error("Kesalahan data kursus:", error);
+          }
         }
-      }
-      tampilkanDataKursus();
-      </script>
+        tampilkanDataKursus();
+      });
+    </script>
+    
 
   </body>
 </html>
