@@ -1,63 +1,77 @@
 // Fungsi untuk kirim form kontak (Kontak) (Awal)
 function kirimForm(event) {
-    event.preventDefault();
+  event.preventDefault();
+  const form = document.getElementById("kontakForm");
+  const nama = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const pesan = document.getElementById("pesan").value;
+  const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
-    const form = document.getElementById("kontakForm");
-    const nama = document.getElementById("nama").value;
-    const email = document.getElementById("email").value;
-    const pesan = document.getElementById("pesan").value;
-    const data = {
-        nama: nama,
-        email: email,
-        pesan: pesan
-    };
+  if (nama.trim() === "" || pesan.trim() === "") {
+    tampilkanPopup("Form nama dan pesan wajib diisi.");
+    return;
+  }
+  if (!emailPattern.test(email)) {
+      tampilkanPopup("Masukkan alamat email yang valid.");
+      return;
+  }
 
-    fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/kontak", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        tampilkanPopup("Terima kasih pesan Anda berhasil dikirim, kami segera menghubungi Anda");
-        form.reset();
-    })
-    .catch(error => {
-        console.error(error);
-        tampilkanPopup("Terjadi kesalahan saat mengirim pesan.");
-    });
+  const data = {
+      nama: nama,
+      email: email,
+      pesan: pesan
+  };
+
+  fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/kontak", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      tampilkanPopup("Terima kasih pesan Anda berhasil dikirim, kami segera menghubungi Anda");
+      form.reset();
+  })
+  .catch(error => {
+      console.error(error);
+      tampilkanPopup("Terjadi kesalahan saat mengirim pesan.");
+  });
 }
 // Fungsi untuk kirim form kontak (Kontak) (Akhir)
 
 // Fungsi untuk kirim form berlangganan (Kontak) (Awal)
 function kirimFormBerlangganan(event) {
-    event.preventDefault();
-    const form = document.getElementById("berlanggananForm");
-    const email = document.getElementById("emailBerlangganan").value;
-    const data = {
-        email: email
-    };
-
-    fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/berlangganan", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(responseData => {
-        console.log(responseData);
-        tampilkanPopup(`Terima kasih email ${email}, telah berhasil berlangganan info terkini dari XGrow!`);
-        form.reset();
-    })
-    .catch(error => {
-        console.error(error);
-        tampilkanPopup("Terjadi kesalahan saat berlangganan.");
-    });
+  event.preventDefault();
+  const form = document.getElementById("berlanggananForm");
+  const email = document.getElementById("emailBerlangganan").value;
+  const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+  if (!emailPattern.test(email)) {
+      tampilkanPopup("Masukkan alamat email yang valid.");
+      return;
+  }
+  const data = {
+      email: email
+  };
+  fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/berlangganan", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(responseData => {
+      console.log(responseData);
+      tampilkanPopup(`Terima kasih email ${email}, telah berhasil berlangganan info terkini dari XGrow!`);
+      form.reset();
+  })
+  .catch(error => {
+      console.error(error);
+      tampilkanPopup("Terjadi kesalahan saat berlangganan.");
+  });
 }
 // Fungsi untuk kirim form berlangganan (Kontak) (Akhir)
 
@@ -148,7 +162,6 @@ async function ambilDataDanTampilkanKartu() {
     console.error('Kesalahan data unggulan:', error);
   }
 }
-
 ambilDataDanTampilkanKartu();
 // Fungsi untuk menampilkan data program unggulan (Akhir)
 

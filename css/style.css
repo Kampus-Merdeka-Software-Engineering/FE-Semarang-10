@@ -857,16 +857,15 @@ Pesan PopUp
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: #fdbd58;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
 .popup p{
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #000;
+  color: #fff;
 }
 
 .popup button{
