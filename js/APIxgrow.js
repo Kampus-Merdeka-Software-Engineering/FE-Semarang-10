@@ -154,7 +154,7 @@ async function ambilDataDanTampilkanKartu() {
         <img src="${item.gambar}" alt="${item.judul}" />
         <h2>${item.judul}</h2>
         <p>${item.keterangan}</p>
-        <button>Tambah Kursus</button>
+        <button class="tambah-kursus" data-id="${item.id}">Tambah Kursus</button>
       `;
       kontainerKartu.appendChild(kartu);
     }
@@ -164,6 +164,15 @@ async function ambilDataDanTampilkanKartu() {
 }
 ambilDataDanTampilkanKartu();
 // Fungsi untuk menampilkan data program unggulan (Akhir)
+
+// Fungsi untuk link ke pendataan program unggulan (Awal)
+kontainerKartu.addEventListener('click', (event) => {
+  if (event.target.classList.contains('tambah-kursus')) {
+    const idKursus = event.target.getAttribute('data-id');
+    window.location.href = `pendataan.html?id=${idKursus}`;
+  }
+});
+// Fungsi untuk link ke pendataan program unggulan (Akhir)
 
 // Fungsi untuk menampilkan data program baru (Awal)
 const urlPbaru = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru';

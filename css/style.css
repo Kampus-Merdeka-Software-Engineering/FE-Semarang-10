@@ -1276,3 +1276,94 @@ Sejarah
     font-size: 1.5em;
   }
 }
+
+
+/* -----------------------------------------------------------------
+Style - Tampilan Pendataan
+----------------------------------------------------------------- */
+.pendataan {
+  display: flex;
+  align-items: center;
+  padding: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #ffffff;
+}
+
+.pendataan-text {
+  flex: 1;
+  padding: 30px;
+}
+
+.pendataan-text h1 {
+  font-size: 32px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.pendataan-text p {
+  font-size: 15px;
+  margin: 10px 0;
+  padding-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .pendataan{
+    padding: 150px 0;
+    padding-bottom: 200px;
+  }
+  .pendataan-text h1 {
+    font-size: 36px;
+  }
+  .pendataan-text p {
+    font-size: 14px;
+  }
+}
+
+.form-pendataan label {
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pendataan-con{
+  padding: 0px;
+  padding-top: 0px;
+}
+
+.form-pendataan input[type="text"],
+.form-pendataan input[type="email"],
+.form-pendataan textarea,
+.form-pendataan input[type="date"],
+.form-pendataan input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-pendataan input[type="text"],
+.form-pendataan input[type="email"],
+.form-pendataan textarea,
+.form-pendataan input[type="date"],
+.form-pendataan input[type="time"] {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+}
+
+.form-pendataan input[type="submit"] {
+  background-color: #fdbd58;
+  float: right;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-pendataan input[type="submit"]:hover {
+  background-color: #fc9b00;
+}
