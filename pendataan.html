@@ -17,7 +17,6 @@
   </head>
 
   <body>
-
     <!-- Navigasi Bar (Awal)-->
       <nav class="navbar">
         <div class="navbar-container">
@@ -49,23 +48,25 @@
             <div class="form-pendataan">
               <form id="kursusForm" class="pendataan-con">
 
-                  <p><i class="fa-solid fa-file"></i>&nbsp; Kursus yang anda pilih. </p>
-                  <input type="hidden" id="idKursus" name="idKursus" />
-                  <label for="judul">Pilihan Kursus:</label>
-                  <input type="text" id="judul" name="judul" readonly><br><br>
-                  <label for="judul">Keterangan Kursus:</label>
-                  <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
+                <p><i class="fa-solid fa-file"></i>&nbsp; Pilihan Kursus.</p>
 
-                  <p><i class="fa-solid fa-file"></i>&nbsp; Data Anda </p>
-                  <label for="nama">Nama:</label>
-                  <input type="text" id="nama" name="nama"><br><br>
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email"><br><br>
-                  <label for="keterangantambahan">Keterangan:</label><br>
-                  <textarea id="keterangantambahan" name="keterangantambahan" rows="5" cols="50"></textarea><br><br>
+                <input type="hidden" id="idKursus" name="idKursus" />
+                <label for="judul">Pilihan Kursus:</label>
+                <input type="text" id="judul" name="judul" readonly><br><br>
+                <label for="judul">Keterangan Kursus:</label>
+                <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
 
-                  <p><i class="fa-solid fa-circle-exclamation"></i>&nbsp; Sebelum Anda mengirim data pendataan, pastikan data yang Anda kirim telah benar dan sesuai. </p>
-                  <input type="submit" value="Daftar" onclick="daftarForm(event)">
+                <p><i class="fa-solid fa-file"></i>&nbsp; Data Diri Anda</p>
+
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" cols="50"></textarea><br><br>
+              
+                <p><i class="fa-solid fa-circle-exclamation"></i>&nbsp; Sebelum Anda mengirim data pendataan, pastikan data yang Anda kirim telah benar dan sesuai.</p>
+                <input type="submit" value="Daftar" onclick="daftarForm(event)">
               </form>
             </div>
           </div>
@@ -73,7 +74,7 @@
       </section>
     <!-- Form pendataan (Akhir) -->
     
-    <!-- Tips Singka (Awal) -->
+    <!-- Tips Singkat (Awal) -->
       <section id="sejarah">
         <div class="sejarah-container">
           <div class="sejarah-text">
@@ -109,6 +110,8 @@
     <!-- JavaScript -->
     <script src="js/xgrow.js"></script>
     <script src="js/APIxgrow.js"></script>
+
+    <!-- Isi data automatis pada Form -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         async function tampilkanDataKursus() {
@@ -145,7 +148,6 @@
         tampilkanDataKursus();
       });
     </script>
-    
 
   </body>
 </html>

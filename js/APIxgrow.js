@@ -192,7 +192,7 @@ async function ambilDataDanTampilkanKartuPbaru() {
 ambilDataDanTampilkanKartuPbaru();
 // Fungsi untuk menampilkan data program baru (Akhir)
 
-// Fungsi untuk link ke pendataan program unggulan (Awal)
+// Fungsi untuk link ke pendataan program unggulan dan baru (Awal)
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('tambah-kursus')) {
     const idKursus = event.target.getAttribute('data-id');
@@ -202,6 +202,53 @@ document.addEventListener('click', (event) => {
     window.location.href = `pendataan.html?id=${idKursus}&jenis=pbaru`;
   }
 });
-// Fungsi untuk link ke pendataan program unggulan (Akhir)
+// Fungsi untuk link ke pendataan program unggulan dan baru (Akhir)
 
 
+// Fungsi untuk pengiriman data pendataan ke API (Awal)
+function daftarForm(event) {
+  event.preventDefault();
+
+  const formulir = document.getElementById("kursusForm");
+  const judul = document.getElementById("judul").value;
+  const keterangan = document.getElementById("keterangan").value;
+  const nama = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const pesan = document.getElementById("pesan").value;
+  const data = {
+    judul: judul,
+    keterangan: keterangan,
+    nama: nama,
+    email: email,
+    pesan: pesan,
+    status: "Proses Daftar",
+    tanggalpendataan: new Date().toISOString().split('T')[0],
+  };
+
+  fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pendataan", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(responseData => {
+    console.log(responseData);
+    formulir.reset();
+    window.location.href = "index.html?showPopup=berhasil";
+  })
+  .catch(error => {
+    console.error(error);
+    window.location.href = "index.html?showPopup=gagal";
+  });
+}
+// Popup - pesan
+  const urlParams = new URLSearchParams(window.location.search);
+  const showPopup = urlParams.get('showPopup');
+    if (showPopup === 'berhasil') {
+      tampilkanPopup("Pendaftaran berhasil dilakukan, kami akan mengecek data yang Anda kirim");
+    } else if (showPopup === 'gagal') {
+      tampilkanPopup("Mohon maaf pendaftaran gagal, coba lagi atau hubungi kontak kami");
+    }
+// Fungsi untuk pengiriman data pendataan ke API (Akhir)
