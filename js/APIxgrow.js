@@ -215,6 +215,17 @@ function daftarForm(event) {
   const nama = document.getElementById("nama").value;
   const email = document.getElementById("email").value;
   const pesan = document.getElementById("pesan").value;
+  const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+  if (nama.trim() === "" || email.trim() === "" || pesan.trim() === "") {
+    tampilkanPopup("Semua form wajib diisi.");
+    return;
+  }
+  if (!emailPattern.test(email)) {
+      tampilkanPopup("Masukkan alamat email yang valid.");
+      return;
+  }
+
   const data = {
     judul: judul,
     keterangan: keterangan,
