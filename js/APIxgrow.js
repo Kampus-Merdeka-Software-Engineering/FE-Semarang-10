@@ -208,8 +208,8 @@ document.addEventListener('click', (event) => {
 // Fungsi untuk pengiriman data pendataan ke API (Awal)
 function daftarForm(event) {
   event.preventDefault();
-
   const formulir = document.getElementById("kursusForm");
+  const kodependataan = document.getElementById("kodependataan").value;
   const judul = document.getElementById("judul").value;
   const keterangan = document.getElementById("keterangan").value;
   const nama = document.getElementById("nama").value;
@@ -227,6 +227,7 @@ function daftarForm(event) {
   }
 
   const data = {
+    kodependataan: kodependataan,
     judul: judul,
     keterangan: keterangan,
     nama: nama,

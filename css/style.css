@@ -1374,3 +1374,21 @@ Style - Tampilan Pendataan
 .form-pendataan input[type="submit"]:hover {
   background-color: #fc9b00;
 }
+
+.cekbutton {
+  background-color: #fdbd58;
+  font-size: 13px;
+  color: #fff;
+  float: left;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cekbutton:hover {
+  background-color: #fc9b00;
+  color: #fff;
+}

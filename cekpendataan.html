@@ -39,17 +39,19 @@
       </nav>
     <!-- Navigasi Bar (Akhir)-->
 
-    <!-- Form pendataan (Awal) -->
+    <!-- Form cek pendataan (Awal) -->
       <section class="sectionp" id="pendataan">
         <div class="pendataan">
           <div class="pendataan-text">
-            <h1>Form Pendataan Awal Pendaftaran Kursus di XGROW</h1>
-            <p>Silahkan isi data yang di perlukan untuk memulai kursus Anda bersama XGrow, kami akan mengirimkan pesan melalui Email yang di kirimkan. </p>
+            <h1>Cek Status Pendaftaran Kursus di XGROW</h1>
+            <p>Silahkan isi kode pendatan berjumlah 10 karakter acak, untuk mengetahui status pendataan anda. </p>
             <div class="form-pendataan">
-              <form id="kursusForm" class="pendataan-con">
-                <p><i class="fa-solid fa-file"></i>&nbsp; Kode kursus Anda (Mohon di catat untuk mengetahui status pendaftaran).</p>
-                <label for="kodependataan">Kode Anda:</label>
-                <input type="text" id="kodependataan" name="kodependataan" readonly><br><br>
+              <form id="kursusCek" class="pendataan-con">
+                <label for="kodependataan">Kode Pendataan Anda:</label>
+                <input type="text" id="kodependataan" name="kodependataan"><br><br>
+                <input type="submit" value="Cek Status" onclick="kursusCek(event)">
+                <p><i class="fa-solid fa-file"></i>&nbsp; Status Pendaftaran Kursus.</p>
+                <input type="text" id="status" name="status" readonly><br><br>
                 <p><i class="fa-solid fa-file"></i>&nbsp; Pilihan Kursus.</p>
                 <input type="hidden" id="idKursus" name="idKursus" />
                 <label for="judul">Pilihan Kursus:</label>
@@ -58,27 +60,16 @@
                 <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
                 <p><i class="fa-solid fa-file"></i>&nbsp; Data Diri Anda</p>
                 <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama"><br><br>
+                <input type="text" id="nama" name="nama" readonly><br><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" readonly><br><br>
                 <label for="pesan">Pesan:</label><br>
-                <textarea id="pesan" name="pesan" rows="5" cols="50"></textarea><br><br>
-              
-                <p><i class="fa-solid fa-circle-exclamation"></i>&nbsp; Sebelum Anda mengirim data pendataan, pastikan data yang Anda kirim telah benar dan sesuai.</p>
-                <input type="submit" value="Daftar" onclick="daftarForm(event)">
-                <a href="cekpendataan.html" class="cekbutton"> Sudah Daftar Cek Pendaftaran</a>
+                <textarea id="pesan" name="pesan" rows="5" cols="50" readonly></textarea><br><br>
               </form>
             </div>
           </div>
         </div>
-        <!-- PopUp - Pesan -->
-        <div class="overlay" id="overlay"></div>
-        <div class="popup" id="popup">
-            <p id="popupMessage">Pesan</p>
-            <button onclick="tutupPopup()">Oke, tutup</button>
-        </div>
-      </section>
-    <!-- Form pendataan (Akhir) -->
+    <!-- Form cek pendataan (Akhir) -->
     
     <!-- Tips Singkat (Awal) -->
       <section id="sejarah">
@@ -117,52 +108,30 @@
     <script src="js/xgrow.js"></script>
     <script src="js/APIxgrow.js"></script>
     <script>
-      function generateKodeAcak(panjang) {
-      const karakter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-      let kodeAcak = "";
-      for (let i = 0; i < panjang; i++) {
-        const indeksAcak = Math.floor(Math.random() * karakter.length);
-        kodeAcak += karakter.charAt(indeksAcak); }
-      return kodeAcak; }
-      document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("kodependataan").value = generateKodeAcak(15);
-    });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        async function tampilkanDataKursus() {
-          const idKursus = new URLSearchParams(window.location.search).get("id");
-          const jenisKursus = new URLSearchParams(window.location.search).get("jenis");
-          if (!idKursus || !jenisKursus) {
-            console.error("ID kursus atau jenis kursus tidak ditemukan dalam parameter URL.");
-            return;
-          }
-          let apiUrl;
-          if (jenisKursus === "unggulan") {
-            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan/${idKursus}`;
-          } else if (jenisKursus === "pbaru") {
-            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru/${idKursus}`;
-          } else {
-            console.error("Jenis kursus tidak valid.");
-            return;
-          }
-          try {
-            const response = await fetch(apiUrl);
-            const dataKursus = await response.json();
-    
-            if (dataKursus && dataKursus[0]) {
-              document.getElementById("idKursus").value = dataKursus[0].id;
-              document.getElementById("judul").value = dataKursus[0].judul;
-              document.getElementById("keterangan").value = dataKursus[0].keterangan;
-            } else {
-              console.error("Data kursus tidak lengkap.");
-            }
-          } catch (error) {
-            console.error("Kesalahan data kursus:", error);
-          }
+      async function kursusCek(event) {
+      event.preventDefault();
+      const kodependataan = document.getElementById("kodependataan").value;
+      const apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pendataan/kodependataan/${kodependataan}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const dataPendataan = await response.json();
+        if (dataPendataan && dataPendataan.nama) {
+          document.getElementById("nama").value = dataPendataan.nama;
+          document.getElementById("email").value = dataPendataan.email;
+          document.getElementById("status").value = dataPendataan.status;
+          document.getElementById("idKursus").value = dataPendataan.idKursus;
+          document.getElementById("judul").value = dataPendataan.judul;
+          document.getElementById("keterangan").value = dataPendataan.keterangan;
+          document.getElementById("pesan").value = dataPendataan.pesan;
+        } else {
+          console.error("Data pendataan tidak ditemukan.");
         }
-        tampilkanDataKursus();
-      });
+      } catch (error) {
+        console.error("Kesalahan saat mengambil data pendataan:", error);
+      }
+    }
+    document.getElementById("kursusCek").addEventListener("submit", kursusCek);
     </script>
 
   </body>

@@ -181,5 +181,3 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('load', aktifkanFormKontak);
 // Kontak toggle (Kontak) (Akhir)
 
-
-
