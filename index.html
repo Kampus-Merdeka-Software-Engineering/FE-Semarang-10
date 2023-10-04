@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device=width,initial-scale=1.0">
     <link rel="icon" href="assets/img/logo-icon.png" type="image/png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans"/>
+
+    <!-- Fonts Global -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans"/>  
+    <!-- Icon Global -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>XGROW</title>
@@ -15,8 +18,7 @@
 
   <body>
 
-      <!-- Navigasi Bar (Awal)-->
-
+    <!-- Navigasi Bar (Awal)-->
       <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html"><img src="assets/img/logo.gif" alt="Image" class="navbar-logo" /></a>
@@ -25,21 +27,21 @@
               <i class="fas fa-bars"></i>
             </label>
             <ul class="navbar-nav">
-              <li class="nav-item"> <a href="#section1" class="nav-link">Rumah</a> </li>
+              <li class="nav-item"> <a href="#rumah" class="nav-link">Rumah</a> </li>
               <li class="nav-item"> <a href="#promo" class="nav-link">Promo</a> </li>
               <li class="nav-item"> <a href="#program" class="nav-link">Program</a> </li>
               <li class="nav-item"> <a href="#layanan" class="nav-link">Layanan</a> </li>
               <li class="nav-item"> <a href="#mitra" class="nav-link">Mitra</a> </li>
               <li class="nav-item"> <a href="#kontak" class="nav-link">Kontak</a> </li>
               <li class="nav-item"> <a href="tentang.html" class="nav-link">Tentang XGrow</a> </li>
-              <li class="nav-item"> <a href="member.html" class="nav-link">Tim Kami</a> </li>
+              <li class="nav-item"> <a href="tim.html" class="nav-link">Tim Kami</a> </li>
             </ul>
         </div>
       </nav>
-      <!-- Navigasi Bar (Akhir)-->
+    <!-- Navigasi Bar (Akhir)-->
 
-      <!-- Home (Awal) -->
-      <section class="sectionp" id="section1">
+    <!-- Home (Awal) -->
+      <section class="sectionp" id="rumah">
         <div class="home">
           <div class="home-text">
             <h1>Pelajari <span id="teksHomeUbah">keterampilan</span> siap kerja dengan & bersertifikat</h1>
@@ -50,31 +52,30 @@
           </div>
         </div>
       </section>
+    <!-- Home (Akhir) -->
 
-      <!-- Home (Akhir) -->
-
-      <!-- Card Data Home (Awal) -->
+    <!-- Card Data Home (Awal) -->
       <div class="data-home">
         <div class="data-item">
             <h1>Jumlah Pengguna</h1>
-            <p>2000+</p>
+            <p id="jumlahPengguna"></p>
         </div>
         <div class="data-item">
             <h1>Jumlah Mentor</h1>
-            <p>300+</p>
+            <p id="jumlahMentor"></p>
         </div>
         <div class="data-item">
             <h1>Jumlah Alumni</h1>
-            <p>8700+</p>
+            <p id="jumlahAlumni"></p>
         </div>
         <div class="data-item">
             <h1>Keberhasilan Belajar</h1>
-            <p>99%</p>
+            <p id="keberhasilanBelajar"></p>
         </div>
       </div>
-      <!--Card Data Home (Akhir) -->
+    <!--Card Data Home (Akhir) -->
 
-      <!-- Promo (Awal) -->
+    <!-- Promo (Awal) -->
       <section class="sectionp" id="promo">
         <div class="promo-container">
           <div class="promo-image">
@@ -86,175 +87,137 @@
           </div>
         </div>
       </section>
- 
-      <!-- Promo (Akhir)-->
+    <!-- Promo (Akhir)-->
 
-      <!-- Program (Awal) -->
+    <!-- Program (Awal) -->
       <section id="program">
-        <!-- program pilihan -->
-        <div class="program">
-          <h1>
-          Program Unggulan 
-          </h1>
-          <div class="program-container">
-            <div class="kartu-program">
-              <img src="assets/img/digital-marketing.jpg" alt="Image" />
-              <h2>Digital Marketing</h2>
-              <p>Kuasai  berbagai skill dan tools <br> di bidang Digital Marketing untuk <br> menjadi profesional. </p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
-  
-            <div class="kartu-program">
-              <img src="assets/img/data analyst and science.jpg" alt="Image" />
-              <h2>Data Analysis</h2>
-              <p> Kuasai skill untuk menjadi <br> Data Analyst, Data Science <br> hanya 40+ pertemuan. </p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
-  
-            <div class="kartu-program">
-              <img src="assets/img/website development.jpg" alt="Image" />
-              <h2>Website Dev</h2>
-              <p> Kuasai skill untuk menjadi <br> pengembang website <br> profesional  40+ pertemuan. </p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
-            <div class="kartu-program">
-              <img src="assets/img/produk manajemen.jpeg" alt="Image" />
-              <h2>Product Management</h2>
-              <p> Kuasai  berbagai skill dan <br> tools di bidang digital <br> untuk menjadi profesional.<br>   
-              </p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
+        <!-- Program unggulan -->
+        <div class="program"> <h1> Program Unggulan </h1> </div>
+        <div class="kontainer-kartu">
+          <div class="section-kiri">
+              <button class="button-slide-kiri" id="buttonSebelumnya">
+                  <i class="fas fa-chevron-left"></i>
+              </button>
+          </div>
+          <div class="section-tengah" id="kartu-container"></div>
+          <div class="section-kanan">
+              <button class="button-slide-kiri" id="buttonSelanjutnya">
+                  <i class="fas fa-chevron-right"></i>
+              </button>
           </div>
         </div>
-
         <!-- program baru -->
-        <div class="program-2">
-          <h1>
-          Program Baru
-          </h1>
-          <div class="program-container">
-            <div class="kartu-program">
-              <img src="assets/img/cyber.jpeg" alt="Image" />
-              <h2>Cyber Security Specialist</h2>
-              <p> Kuasai   skill tentang <br>sistem keamanan siber<br>sampai menjadi profesional<br>dengan modul yang disusun <br>oleh praktisi profesional.</p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
-            <div class="kartu-program">
-              <img src="assets/img/carrer and personal.webp" alt="Image" />
-              <h2>Carrer and Self Development</h2>
-              <p> Kuasai  20 lebih skill<br> tentang Persiapan Karir, SoftSkills <br>hingga Finansial. Dari level dasar <br>hingga lanjut. Dibuat terstruktur oleh<br> Praktisi HR, Psikolog dan banyak lagi.</p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
-            <div class="kartu-program">
-              <img src="assets/img/ai.jpg" alt="Image" />
-              <h2>AI Specialist</h2>
-              <p> Kuasai skill untuk menjadi <br> AI Specialist <br> profesional dengan 40+ pertemuan.<br>dengan modul yang disusun<br>oleh praktisi profesional<br> </p>
-              <button class="button-program">Daftar Sekarang</button>
-            </div>
+        <div class="program-2"> <h1> Program Baru </h1> </div>
+        <div class="kontainer-kartu">
+          <div class="section-kiri">
+              <button class="button-slide-kiri" id="buttonSebelumnya">
+                  <i class="fas fa-chevron-left"></i>
+              </button>
+          </div>
+          <div class="section-tengah" id="kartu-container-pbaru"></div>
+          <div class="section-kanan">
+              <button class="button-slide-kiri" id="buttonSelanjutnya">
+                  <i class="fas fa-chevron-right"></i>
+              </button>
           </div>
         </div>
-      
-    </section>
+        <div class="cekstatus">
+          <a href="cekpendataan.html"><i class="fas fa-solid fa-file"></i>&nbsp;&nbsp;Sudah Ambil Kursus, Cek Status </a>
+        </div>
+      </section>
     <!-- Program (Akhir) -->
 
     <!-- Layanan (Awal)-->
-    <section id="layanan">
-      <div class="layanan">
-        <img src="assets/img/layanan.png" alt="Gambar Layanan Kami">
-        <ul>
-            <li>Live class via zoom dengan mentor selama 40+ pertemuan</li>
-            <li>Extra video learning 20+ jam untuk menunjang pembelajaran kelas</li>
-            <li>Teori practical exercises setiap pertemuan</li>
-            <li>Project portofolio di bidang Program Career Bootcamp yang diikuti</li>
-            <li>Konsultasi pribadi bersama mentor ahli berpengalaman</li>
-        </ul>
-    </div>
-    </section>
+      <section id="layanan">
+        <div class="layanan">
+          <img src="assets/img/layanan.gif" alt="Gambar Layanan Kami">
+          <ul>
+              <li>Live class via zoom dengan mentor selama 40+ pertemuan</li>
+              <li>Extra video learning 20+ jam untuk menunjang pembelajaran kelas</li>
+              <li>Teori practical exercises setiap pertemuan</li>
+              <li>Project portofolio di bidang Program Career Bootcamp yang diikuti</li>
+              <li>Konsultasi pribadi bersama mentor ahli berpengalaman</li>
+          </ul>
+        </div>
+      </section>
     <!-- Layanan (Akhir)-->
 
     <!-- Mitra (Awal)-->
-    <section id="mitra">
-      <div class="mitra-judul">
-        <h1>Mitra Kami</h1>
-      </div>
-      <div class="mitra-container">
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-google"></i></div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-microsoft"></i> </div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-github-square"></i> </div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-slack"></i> </div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-apple"></i> </div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-node"></i> </div> </div>
-        <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-square-js"></i> </div> </div>
-      </div>
-    </section>
+      <section id="mitra">
+        <div class="mitra-judul"> <h1>Mitra Kami</h1> </div>
+        <div class="mitra-container">
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-google"></i></div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-microsoft"></i> </div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-github-square"></i> </div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-slack"></i> </div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-apple"></i> </div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-node"></i> </div> </div>
+          <div class="mitra-img"> <div class="mitra-icon"> <i class="fab fa-square-js"></i> </div> </div>
+        </div>
+      </section>
     <!-- Mitra (Akhir)-->
 
     <!-- Kontak (Awal)  -->
-    <section id="kontak">
-      <div class="kontak-container">
-
-        <div class="kontak-judul">
-          <h1>Kontak & Berlangganan</h1>
+      <section id="kontak">
+        <div class="kontak-container">
+          <div class="kontak-judul"> <h1>Kontak & Berlangganan</h1> </div>
+          <!-- Pilihan kontak -->
+          <div class="kontak-pilihan-container">
+            <div class="ikon" id="tampilFormKontak"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Kontak</div>
+            <div class="divider"></div>
+            <div class="ikon" id="tampilFormBerlangganan"><i class="fa-solid fa-star"></i>&nbsp;&nbsp; Berlangganan</div>
+          </div>
+          <!-- Kontak kirim pesan (Email) -->
+          <div class="form-kontak" id="formKontak">
+            <h2>Kirim Pesan</h2>
+            <form class="kontak-con" id="kontakForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" cols="50"></textarea><br><br>
+                <input type="submit" value="Kirim" onclick="kirimForm(event)">
+            </form>
+          </div>
+          <!-- Kontak berlangganan -->
+          <div class="form-kontak" id="formBerlangganan">
+            <h2>Berlangganan</h2>
+            <form class="kontak-con" id="berlanggananForm">
+                <label for="emailBerlangganan">Isi email Anda untuk berlangganan info dari kami:</label>
+                <input type="email" id="emailBerlangganan" name="emailBerlangganan"><br><br>
+                <input type="submit" value="Berlangganan" onclick="kirimFormBerlangganan(event)">
+            </form>
+          </div>
         </div>
-
-        <div class="kontak-pilihan-container">
-          <div class="ikon" id="tampilFormKontak"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Kontak</div>
-          <div class="divider"></div>
-          <div class="ikon" id="tampilFormBerlangganan"><i class="fa-solid fa-star"></i>&nbsp;&nbsp; Berlangganan</div>
+        <!-- PopUp - Pesan -->
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <p id="popupMessage">Pesan</p>
+            <button onclick="tutupPopup()">Oke, tutup</button>
         </div>
-      
-        <div class="form-kontak" id="formKontak">
-          <h2>Kirim Pesan</h2>
-          <form class="kontak-con" id="kontakForm">
-              <label for="nama">Nama:</label>
-              <input type="text" id="nama" name="nama"><br><br>
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email"><br><br>
-              <label for="pesan">Pesan:</label><br>
-              <textarea id="pesan" name="pesan" rows="4" cols="50"></textarea><br><br>
-              <input type="submit" value="Kirim" onclick="kirimForm(event)">
-          </form>
-        </div>
-
-        <div class="form-kontak" id="formBerlangganan">
-          <h2>Berlangganan</h2>
-          <form class="kontak-con" id="berlanggananForm">
-              <label for="emailBerlangganan">Isi email Anda untuk berlangganan info dari kami:</label>
-              <input type="email" id="emailBerlangganan" name="emailBerlangganan"><br><br>
-              <input type="submit" value="Berlangganan" onclick="kirimFormBerlangganan(event)">
-          </form>
-        </div>
-
-      </div>
-    </section>
+      </section> 
     <!-- Kontak (Akhir)  -->
 
-    <div class="overlay" id="overlay"></div>
-    <div class="popup" id="popup">
-        <p id="popupMessage">Pesan</p>
-        <button onclick="tutupPopup()">Oke, tutup</button>
-    </div>
-
     <!-- Footer (Awal)-->
-    <footer>
-      <div class="footer-container">
-        <div class="socialicons">
-          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://www.tiktok.com/id-ID/"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.facebook.com/?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
+      <footer>
+        <div class="footer-container">
+          <div class="socialicons">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/id-ID/"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
+          </div>
         </div>
-      </div>
-      </div>
-      <div class="footerBottom">
-        <p class="copyright">Copyright &copy;2023; Designed by <span class="designer">Group 10 Semarang</span></p>
-      </div>
-    </footer>
+        <div class="footerBottom">
+          <p class="copyright">Copyright &copy;2023; Di buat oleh <span class="designer">Group 10 Semarang</span></p>
+        </div>
+      </footer>
     <!-- Footer (Akhir)-->
 
     <!-- InfoBerita (Awal)-->
-    <div class="infoberita"> <div id="marquee-container"></div> </div>
+      <div class="infoberita"> <div id="marquee-container"></div> </div>
     <!-- InfoBerita (Akhir)-->
 
     <!-- JavaScript -->

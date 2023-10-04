@@ -1,8 +1,13 @@
-/*-----------------------------------------------------------------
+/*----------------------------------------------------------------------------
+Style CSS ini di buat oleh Grub 10 Section Semarang untuk Company Profil XGrow
+
+Kami tidak menggunakan library tampilan external tambahan
+------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
 Global
 -----------------------------------------------------------------*/
-html,
-body {
+html, body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-image: none;
   margin: 0;
@@ -12,14 +17,9 @@ body {
   list-style: none;
   box-sizing: border-box;
   outline: none;
+  overflow-x: hidden;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -31,7 +31,22 @@ p {
 }
 
 /*-----------------------------------------------------------------
-Navigasi Bar
+Scroll Bar (Global)
+-----------------------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: auto;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fdbd58;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*-----------------------------------------------------------------
+Navigasi Bar (Global)
 -----------------------------------------------------------------*/
 .navbar {
   position: fixed;
@@ -43,7 +58,6 @@ Navigasi Bar
   background-color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -53,40 +67,36 @@ Navigasi Bar
   margin: 0 auto;
   max-width: 1200px;
 }
-
 .navbar-logo {
   width: 200px;
   height: auto;
 }
-
 .navbar-nav {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
-
 .nav-item {
   margin-right: 5px;
   padding: 10px 10px;
 }
-
 .nav-link {
   text-decoration: none;
   color: #333;
   transition: color 0.5s;
 }
-
 .nav-link:hover {
   color: #fdbd58;
 }
-
 nav a {
   color: #333;
   text-decoration: none;
 }
-
 nav a.aktif {
+  color: #fdbd58;
+}
+.a-aktif {
   color: #fdbd58;
 }
 .checkbtn {
@@ -104,6 +114,7 @@ nav a.aktif {
 @media (max-width: 768px) {
   .navbar-logo {
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   .navbar-nav {
     position: fixed;
@@ -117,13 +128,11 @@ nav a.aktif {
     display: block;
     list-style-type: disc;
   }
-
   .nav-item {
     display: block;
     margin: 20px 0;
     line-height: 30px;
   }
-
   .nav-link{
     padding: 0;
     margin: 0;
@@ -143,7 +152,7 @@ nav a.aktif {
 }
 
 /* -----------------------------------------------------------------
-Style - Tampilan Home
+Style Section - Tampilan Home/Rumah (Index.html)
 ----------------------------------------------------------------- */
 .home {
   display: flex;
@@ -151,61 +160,63 @@ Style - Tampilan Home
   padding: 150px;
   background-color: #ffffff;
 }
-
 .home-text {
   flex: 1;
   padding: 20px;
 }
-
 .home-text h1 {
   font-size: 42px;
   font-weight: 100;
   margin: 0;
 }
-
 .home-text p {
   font-size: 16px;
   margin: 10px 0;
 }
-
 .home-image {
   max-width: 50%;
   padding: 20px;
 }
-
 .home-image img {
   max-width: 80%;
   border-radius: 10px;
 }
-
 .home-image {
   position: relative;
   overflow: hidden;
 }
-
 #imgHomeUbah {
   opacity: 0;
   transition: opacity 3.5s ease-in-out;
 }
-
 #imgHomeUbah.tampil {
   opacity: 1;
 }
 @media (max-width: 768px) {
-  .home{
-    padding: 150px 0;
-    padding-bottom: 200px;
+  .home {
+    padding: 100px 0;
+    flex-direction: column;
+    text-align: center;
   }
   .home-text h1 {
-    font-size: 36px;
+    font-size: 22px;
   }
   .home-text p {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .home-image {
+    max-width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .home-image img {
+    max-width: 100%;
+    border-radius: 0;
   }
 }
 
 /*-----------------------------------------------------------------
-Card Data Home
+Style Section - Card Data Home/Rumah (Index.html)
 -----------------------------------------------------------------*/
 .data-home {
   width: 800px;
@@ -224,16 +235,13 @@ Card Data Home
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
-
 .data-item {
   padding: 0px;
   border-right: 1px solid #ccc;
 }
-
 .data-item:last-child {
   border-right: none;
 }
-
 .data-home h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 15px;
@@ -245,8 +253,6 @@ Card Data Home
   font-weight: bold;
   color: #fdbd58;
 }
-
-
 @media (max-width: 920px) {
   .home{
     padding-bottom: 350px;
@@ -256,14 +262,13 @@ Card Data Home
     padding-top: 350px;
   }
 }
-
 @media (max-width: 768px) {
   .data-home {
       max-width: 80%;
       font-size: 11px;
       height: 100%;
       max-height: 50%;
-      padding: 10px;
+      padding: 0px;
       grid-template-columns: 1fr 1fr;
   }
   .home{
@@ -272,9 +277,18 @@ Card Data Home
   .promo-container{
     padding-top: 350px;
   }
-
+  .data-home h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    color: #000000;
+  }
+  .data-home p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fdbd58;
+  }
 }
-
 @media (max-width: 480px) {
   .data-home {
       max-width: 80%;
@@ -292,7 +306,7 @@ Card Data Home
 }
 
 /*-----------------------------------------------------------------
-Promo 
+Style Section - Promo (Index.html)
 -----------------------------------------------------------------*/
 .promo-container {
   display: flex;
@@ -301,30 +315,25 @@ Promo
   padding: 100px 100px 80px 150px;
   background-color: #fdbd58;
 }
-
 .promo-content {
   display: flex;
   align-items: center;
   max-width: 1200px;
   width: 100%;
 }
-
 .promo-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
-
 .fade-masuk {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
-
 .fade-keluar {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 .promo-image img {
   max-width: 100%;
   max-height: 700px;
@@ -332,7 +341,6 @@ Promo
   height: auto;
   object-fit: contain;
 }
-
 .promo-text {
   flex: 1;
   text-align: left;
@@ -346,7 +354,6 @@ Promo
   border-radius: 5px;
   color: #000000;
 }
-
 .promo-text h1 {
   font-size: 25px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -355,146 +362,244 @@ Promo
   border-radius: 5px;
   color: #000000;
 }
-
 @media (max-width: 768px) {
-  .promo-container{
-    padding: 100px 10px;
+  .promo-container {
+    padding: 20px;
+    display: block;
   }
   .promo-content {
     flex-direction: column;
     text-align: center;
   }
-
   .promo-text {
     padding: 10px;
   }
-
   .promo-text h1 {
-    font-size: 1.5em;
+    font-size: 12px;
+  }
+  .promo-text p {
+    font-size: 10px;
+  }
+  .promo-image img {
+    display: none;
   }
 }
 
 /* -----------------------------------------------------------------
-Style - Card Program
+Style Section - Program dan Kartu Program (index.html)
 ----------------------------------------------------------------- */
-.program h1 {
-  font-size: 32px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-  padding: 150px;
-  padding-bottom: 20px;
-  padding-left: 150px;
-}
-
+.program h1,
 .program-2 h1 {
-  font-size: 32px;
+  font-size: 25px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  padding-left: 150px;
-}
-
-.program-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 10px;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.kartu-program {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px;
   text-align: center;
+  padding: 100px 0px 20px 0px;
+  position: relative;
+  font-weight: bold;
 }
-
-.kartu-program img {
-  max-width: 100%;
-  height: 150px;
-  border-radius: 8px;
-  border: 3px solid #000000;
+.program-2 h1 {
+  padding: 0px 0px 20px 0px;
 }
-
-.kartu-program h2 {
-  margin-top: 10px;
-  font-size: 1.5rem;
+.program h1::after,
+.program-2 h1::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #fdbd58;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
-.kartu-program p {
-  margin-top: 5px;
-  font-size: 1rem;
+.cekstatus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 150px;
+  padding-bottom: 50px;
 }
-
-.button-program{
-  border: none;
-  color: #FFF;
-  font-size: 18px;
-  padding: 8px 16px;
-  background: #fdbd58;
-  background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
-  margin: 14px;
-  cursor:pointer ;
-  transition: all 0.3s ease;
-  border-radius: 5px;
+.cekstatus a {
+  color: #fdbd58;
   text-decoration: none;
-  letter-spacing: 0.3px;
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  font-weight: bold;
 }
-.button-program:hover {
+.cekstatus a:hover {
+  color: #fc9f0b;
+}
+.kartu {
+  width: 250px;
+  height: 400px;
+  background-color: #fdbd58;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kartu img {
+  max-width: 100%;
+  max-height: 220px;
+}
+.kartu h2 {
+  font-size: 17px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #ffff;
+  padding: 15px;
+  color: #000;
+}
+.kartu p {
+  font-size: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #000000;
+  line-height: 1.5; 
+}
+.kartu button {
+  width: 100%;
+  padding: 10px;
+  background-color: #faaf36;
   color: #fff;
-  background: #ff9d00;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+.kartu button:hover {
+  background-color: #fc9f0b;
+}
+.kontainer-kartu {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.button-slide-kiri {
+  cursor: pointer;
+  background-color: #faaf36;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.button-slide-kiri:hover {
+  background-color: #fc9f0b;
+}
+.button-slide-kiri i {
+  color: white;
+}
+.section-tengah {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: hidden;
+}
+.section-kiri {
+  display: flex;
+  padding-right: 30px;
+  padding-left: 150px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.section-kanan {
+  display: flex;
+  padding-left: 30px;
+  padding-right: 150px;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .program h1,
+  .program-2 h1 {
+    font-size: 20px;
+    padding: 50px 0px 20px 0px;
+  }
+  .kartu {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .section-kiri,
+  .section-kanan {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /*-----------------------------------------------------------------
-Layanan
+Style Section - Layanan (index.html)
 -----------------------------------------------------------------*/
 .layanan {
   justify-content: center;
   align-items: center;
   padding: 100px ;
+  padding-top: 20px;
   padding-left: 150px;
   background-color: #fdbd58;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
-
 .layanan img {
   max-width: 80%;
   height: auto;
   display: block;
   margin: 20px auto;
 }
-
 .layanan ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-
 .layanan li {
-  padding: 15px;
+  padding: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 13pt;
-  border: 2px solid #000000;
+  font-size: 15px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-right: 10px;
   margin-bottom: 10px;
   flex: 1;
 }
-
 @media (max-width: 768px) {
   .layanan{
     padding: 100px 10px;
   }
-  
+  .layanan img {
+    display: none;
+  }
+  .layanan li {
+    padding: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+  }
+  .layanan {
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    background-color: #fdbd58;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }
+
 /*----------------------------------------------------------------- 
-Mitra
+Style Section - Mitra (index.html)
 ---------------------------------------------------------------- */
 .mitra-judul h1 {
   font-size: 32px;
@@ -503,9 +608,22 @@ Mitra
   text-align: center;
   padding: 80px;
   padding-top: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative; 
 }
-
+.mitra-judul h1::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #fdbd58;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .mitra-container {
   display: flex;
   justify-content: center;
@@ -513,11 +631,10 @@ Mitra
   flex-wrap: wrap;
   max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2%;
   padding-bottom: 150px;
   box-sizing: border-box;
 }
-
 .mitra-img {
   flex: 1;
   margin: 10px;
@@ -527,14 +644,12 @@ Mitra
   align-items: center;
   width: 100%;
 }
-
 .mitra-img img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
 .mitra-icon {
   display: flex;
   justify-content: center;
@@ -542,25 +657,20 @@ Mitra
   width: 100px;
   height: 100px;
   border-radius: 10%;
-  border: 2px solid #000000;
-  background-color: #fdbd58;
 }
-
 .mitra-icon i {
-  font-size: 50px;
-  color: #ffffff;
+  font-size: 80px;
+  color: #fdbd58;
 }
-
 @media screen and (max-width: 768px) {
   .mitra-judul h1 {
-    font-size: 18px;
+    font-size: 15px;
     padding: 10px;
   }
-
   .mitra-container {
     max-width: 100%;
+    padding: 10px;
   }
-
   .mitra-img {
     flex: 1;
     margin: 10px;
@@ -568,33 +678,29 @@ Mitra
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50%;
   }
-
   .mitra-icon {
     width: 60px;
     height: 60px;
   }
-
   .mitra-icon i {
     font-size: 24px;
   }
 }
 
 /*----------------------------------------------------------------- 
-Kontak
+Style Section - Kontak dan Berlangganan (index.html)
 ---------------------------------------------------------------- */
-
 .kontak-judul h1 {
   font-size: 32px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   text-align: center;
-  padding: 80px;
-  padding-top: 70px;
+  padding: 50px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
-
 .kontak-container {
   justify-content: center;
   align-items: center;
@@ -602,15 +708,22 @@ Kontak
   padding-top: 80px;
   padding-bottom: 50px;
   background-color: #fdbd58;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-bottom: 20px;
 }
-
 .kontak-pilihan-container  {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
+  width: auto;
+  border-radius: 10px;
+  margin: 50px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: #ffff;
+  padding: 30px;
 }
-
 .ikon {
   width: 50%;
   font-size: 22px;
@@ -619,31 +732,26 @@ Kontak
   color: #000;
   cursor: pointer;
 }
-
 .divider {
-  width: 5px;
+  width: 3px;
   height: 30px;
   background-color: #000;
   border-radius: 50px;
   margin: 0 10px;
 }
-
 .form-kontak {
   background-color: #ffff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
   width: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 50px;
-  border: 2px solid #000;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
-}
-
+  margin-top: 10px;
+  }
 .form-kontak.aktif {
   max-height: 700px;
 }
-
 .form-kontak h2 {
   font-size: 22px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -652,7 +760,6 @@ Kontak
   padding: 80px;
   padding-bottom: 10px;
 }
-
 .form-kontak label {
   font-size: 15px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -660,12 +767,10 @@ Kontak
   display: block;
   margin-bottom: 5px;
 }
-
 .kontak-con{
   padding: 80px;
   padding-top: 10px;
 }
-
 .form-kontak input[type="text"],
 .form-kontak input[type="email"],
 .form-kontak textarea,
@@ -677,7 +782,6 @@ Kontak
   border-radius: 3px;
   font-size: 16px;
 }
-
 .form-kontak input[type="submit"] {
   background-color: #fdbd58;
   float: right;
@@ -687,23 +791,18 @@ Kontak
   border-radius: 5px;
   cursor: pointer;
 }
-
 .form-kontak input[type="submit"]:hover {
   background-color: #fc9b00;
 }
-
 #formBerlangganan {
   background-color: #ffff;
 }
-
 #formKontak {
   background-color: #ffff;
 }
-
 .form-kontak + .form-kontak {
   margin-top: 20px;
 }
-
 @media (max-width: 768px) {
   .kontak-judul h1 {
     font-size: 24px;
@@ -734,7 +833,7 @@ Kontak
 }
 
 /*----------------------------------------------------------------- 
-Pesan PopUp
+Style Function - Pesan PopUp (Global)
 ---------------------------------------------------------------- */
 .popup {
   display: none;
@@ -744,18 +843,15 @@ Pesan PopUp
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: #fdbd58;
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
-
 .popup p{
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #000;
+  color: #fff;
 }
-
 .popup button{
   background-color: #fff;
   float: right;
@@ -765,11 +861,9 @@ Pesan PopUp
   border-radius: 5px;
   cursor: pointer;
 }
-
 .popup button :hover{
   background-color: #9e9e9e;
 }
-
 .overlay {
   display: none;
   position: fixed;
@@ -793,63 +887,51 @@ Pesan PopUp
     padding-top: 10px;
   }
 }
+
 /*----------------------------------------------------------------- 
-Footer
+Style Section - Footer (Global)
 ---------------------------------------------------------------- */
-footer {
-  text-align: center;
-  padding:  0;
-  background-color: #ddb41f;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  z-index: 1;
-}
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddb41f;
+  background-color: #fff;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   height: 100px;
 }
-.socialicons {
-  margin: 0 10px;
-  height: 24px;
-}
-
 .socialicons a{
   font-size: inherit;
-  color: #000;
+  color: #fff;
   text-decoration: none;
-  margin-right: 10px;
   padding: 10px;
-  background-color: #fff;
-  border-radius: 1000px;
-  overflow: hidden;
+  border-radius: 100px;
+  background-color: #fdbd58;
 }
 .socialicons a:hover {
-  background-color: #ddb41f;
+  background-color: #ffa30f;
   transition: 0.5s;
 }
 .socialicons a:hover {
-  color: white;
+  color: #fff;
   transition: 0.5s;
 }
 .footerBottom {
-  background-color: #ddb41f;
+  background-color: #fff;
   padding: 0;
   text-align: center;
-  border-top: 1px solid #000;
+  border-top: 2px solid #fdbd58;
 }
 .copyright {
   margin: 0;
   text-decoration: none;
-  color:#000;
+  color:#000000;
+  padding-top: 10px;
   padding-bottom: 50px;
-  font-size: 12pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
 }
-
 @media screen and (max-width: 768px) {
-
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -860,12 +942,13 @@ footer {
   }
 }
 
-
 /*----------------------------------------------------------------- 
-Infoberita
+Style Fuction -  Info Berita (Global)
 ---------------------------------------------------------------- */
 .infoberita {
-  background-color: #fff;
+  background-color: #fdbd58;
+  border-top-right-radius: 75px;
+  border-top-left-radius: 75px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -873,19 +956,591 @@ Infoberita
   padding-bottom: 10px;
   height: 30px;
   font-size: 13px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   font-family: "Plus Jakarta Sans", sans-serif;
-
 }
 #marquee-container{
   padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
 }
-
 @media (max-width: 768px) {
   .infoberita {
       position: static; 
-      background-color: #333;
+      background-color: #fdbd58;
       text-align: center;
   }
+}
+
+/*-----------------------------------------------------------------
+Style Section - Tampilan Tentang XGrow (tentang.html)
+-----------------------------------------------------------------*/
+.tentang-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 100px 80px 150px;
+  background-color: #fdbd58;
+}
+.tentang-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.tentang-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.tentang-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+.tentang-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.tentang-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+.tentang-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .tentang-container{
+    padding: 100px 10px;
+  }
+  .tentang-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tentang-text {
+    padding: 10px;
+  }
+  .tentang-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*-----------------------------------------------------------------
+Style Section - Misi Tentang XGrow (tentang.html)
+-----------------------------------------------------------------*/
+.misi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 200px 100px 200px;
+
+}
+.misi-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.misi-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.misi-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+.misi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+.misi-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #fdbd58;
+  border-radius: 5px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .misi-container{
+    padding: 100px 10px;
+  }
+  .misi-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .misi-text {
+    padding: 10px;
+  }
+  .misi-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*-----------------------------------------------------------------
+Style Section - Visi Tentang XGrow (tentang.html)
+-----------------------------------------------------------------*/
+.visi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px 50px 200px;
+
+}
+.visi-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.visi-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.visi-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+.visi-text {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+.visi-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #fdbd58;
+  border-radius: 5px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .visi-container{
+    padding: 100px 10px;
+  }
+  .visi-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .visi-text {
+    padding: 10px;
+  }
+  .visi-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*-----------------------------------------------------------------
+Style Section - Sejarah Singkat Tentang XGrow (tentang.html)
+-----------------------------------------------------------------*/
+.sejarah-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 150px;
+  background-color: #fdbd58;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.sejarah-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.sejarah-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.sejarah-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+.sejarah-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.sejarah-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+.sejarah-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .sejarah-container{
+    padding: 100px 10px;
+  }
+  .sejarah-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sejarah-text {
+    padding: 10px;
+  }
+  .sejarah-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* -----------------------------------------------------------------
+Style Section - Pendataan Pendaftaran Kursus XGrow (pendataan.html)
+----------------------------------------------------------------- */
+.pendataan {
+  display: flex;
+  align-items: center;
+  padding: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #ffffff;
+}
+.pendataan-text {
+  flex: 1;
+  padding: 30px;
+}
+.pendataan-text h1 {
+  font-size: 32px;
+  font-weight: 100;
+  margin: 0;
+}
+.pendataan-text p {
+  font-size: 15px;
+  margin: 10px 0;
+  padding-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .pendataan{
+    padding: 150px 0;
+    padding-bottom: 200px;
+  }
+  .pendataan-text h1 {
+    font-size: 36px;
+  }
+  .pendataan-text p {
+    font-size: 14px;
+  }
+}
+.form-pendataan label {
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+.pendataan-con{
+  padding: 0px;
+  padding-top: 0px;
+}
+.form-pendataan input[type="text"],
+.form-pendataan input[type="email"],
+.form-pendataan textarea,
+.form-pendataan input[type="date"],
+.form-pendataan input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form-pendataan input[type="text"],
+.form-pendataan input[type="email"],
+.form-pendataan textarea,
+.form-pendataan input[type="date"],
+.form-pendataan input[type="time"] {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+}
+.form-pendataan input[type="submit"] {
+  background-color: #fdbd58;
+  float: right;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-pendataan input[type="submit"]:hover {
+  background-color: #fc9b00;
+}
+
+/*-----------------------------------------------------------------
+Style Section - Tips Singkat (pendataan.html)
+-----------------------------------------------------------------*/
+.tipssingkat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 150px;
+  background-color: #fdbd58;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.tipssingkat-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.tipssingkat-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.tipssingkat-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+.tipssingkat-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.tipssingkat-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+.tipssingkat-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .tipssingkat-container{
+    padding: 100px 10px;
+  }
+  .tipssingkat-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tipssingkat-text {
+    padding: 10px;
+  }
+  .tipssingkat-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* -----------------------------------------------------------------
+Style Section - Tim Kami | Pengembang XGrow (tim.html)
+----------------------------------------------------------------- */
+.tim-kami h1 {
+  font-size: 32px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 80px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  position: relative; 
+}
+.tim-kami h1::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #fdbd58;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px;
+}
+.grid img {
+  padding-left: 12px;
+  padding-top: 9px;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
+}
+img {
+  object-fit: cover;
+}
+.grid > article {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  width: 280px;
+  height: 410px;
+  transition: 0.2s transform;
+  cursor: pointer;
+}
+.grid > article img {
+  padding-left: 12px;
+  padding-top: 15px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.grid > article:hover {
+  transform: scale(1.1);
+}
+.grid p {
+  color: #000;
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+}
+.grid h2 {
+  color: #000;
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.grid button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #fdbd58;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+}
+.grid button:hover {
+  background-color: #fc9b00;
+}
+
+/*-----------------------------------------------------------------
+Style Section - Tentang Tim (tim.html)
+-----------------------------------------------------------------*/
+.tentangtim-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 150px;
+  background-color: #fdbd58;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.tentangtim-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.tentangtim-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.tentangtim-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+.tentangtim-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.tentangtim-text p {
+  font-size: 13px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+.tentangtim-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .tentangtim-container{
+    padding: 100px 10px;
+  }
+  .tentangtim-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tentangtim-text {
+    padding: 10px;
+  }
+  .tentangtim-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* -----------------------------------------------------------------
+Style Section - Button Cek Pendaftaran XGrow (cekpendataan.html)
+----------------------------------------------------------------- */
+.cekbutton {
+  background-color: #fdbd58;
+  font-size: 13px;
+  color: #fff;
+  float: left;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.cekbutton:hover {
+  background-color: #fc9b00;
+  color: #fff;
 }

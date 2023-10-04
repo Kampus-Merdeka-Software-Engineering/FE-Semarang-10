@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width,initial-scale=1.0">
+    <link rel="icon" href="assets/img/logo-icon.png" type="image/png">
+
+    <!-- Fonts Global -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans"/>  
+    <!-- Icon Global -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>XGROW</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigasi Bar (Awal)-->
+      <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html"><img src="assets/img/logo.gif" alt="Image" class="navbar-logo" /></a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <ul class="navbar-nav">
+              <li class="nav-item"> <a href="index.html#rumah" class="nav-link">Rumah</a> </li>
+              <li class="nav-item"> <a href="index.html#promo" class="nav-link">Promo</a> </li>
+              <li class="nav-item"> <a href="index.html#program" class="nav-link a-aktif">Program</a> </li>
+              <li class="nav-item"> <a href="index.html#layanan" class="nav-link">Layanan</a> </li>
+              <li class="nav-item"> <a href="index.html#mitra" class="nav-link">Mitra</a> </li>
+              <li class="nav-item"> <a href="index.html#kontak" class="nav-link">Kontak</a> </li>
+              <li class="nav-item"> <a href="tentang.html" class="nav-link">Tentang XGrow</a> </li>
+              <li class="nav-item"> <a href="tim.html" class="nav-link">Tim Kami</a> </li>
+            </ul>
+        </div>
+      </nav>
+    <!-- Navigasi Bar (Akhir)-->
+
+    <!-- Form pendataan (Awal) -->
+      <section class="sectionp" id="pendataan">
+        <div class="pendataan">
+          <div class="pendataan-text">
+            <h1>Form Pendataan Awal Pendaftaran Kursus di XGROW</h1>
+            <p>Silahkan isi data yang di perlukan untuk memulai kursus Anda bersama XGrow, kami akan cek data awal pendaftaran Anda dan mengubah status pendataran. </p>
+            <div class="form-pendataan">
+              <form id="kursusForm" class="pendataan-con">
+                <p><i class="fa-solid fa-file"></i>&nbsp; Kode kursus Anda (Mohon di catat untuk mengetahui status pendaftaran).</p>
+                <label for="kodependataan">Kode Anda:</label>
+                <input type="text" id="kodependataan" name="kodependataan" readonly><br><br>
+                <p><i class="fa-solid fa-file"></i>&nbsp; Pilihan Kursus.</p>
+                <input type="hidden" id="idKursus" name="idKursus" />
+                <label for="judul">Pilihan Kursus:</label>
+                <input type="text" id="judul" name="judul" readonly><br><br>
+                <label for="judul">Keterangan Kursus:</label>
+                <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
+                <p><i class="fa-solid fa-file"></i>&nbsp; Data Diri Anda</p>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="pesan">Keterangan Pendukung:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" cols="50"></textarea><br><br>
+              
+                <p><i class="fa-solid fa-circle-exclamation"></i>&nbsp; Sebelum Anda mengirim data pendataan, pastikan data yang Anda kirim telah benar dan sesuai.</p>
+                <input type="submit" value="Daftar" onclick="daftarForm(event)">
+                <a href="cekpendataan.html" class="cekbutton"> Sudah Ambil Kursus, Cek Status</a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- PopUp - Pesan -->
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <p id="popupMessage">Pesan</p>
+            <button onclick="tutupPopup()">Oke, tutup</button>
+        </div>
+      </section>
+    <!-- Form pendataan (Akhir) -->
+    
+    <!-- Tips Singkat (Awal) -->
+      <section id="tipssingkat">
+        <div class="tipssingkat-container">
+          <div class="tipssingkat-text">
+            <h1>Tips Singkat</h1>
+            <p> Untuk memilih kursus yang baik dan efektif, pertama tentukan tujuan Anda dengan jelas dan lakukan penelitian menyeluruh tentang kursus 
+              yang ditawarkan, termasuk kurikulum, dan ulasan terkait kursus yang ingin Anda ambil.
+              Selain itu, berkomunikasi dengan tim XGrow terlebih dahulu merupakan langkah tepat, agar dapat memastikan investasi waktu dan upaya 
+              Anda berdampak positif pada perkembangan Anda.</p>
+          </div>
+        </div>
+      </section>
+    <!-- Tips Singkat (Akhir)-->
+
+    <!-- Footer (Awal)-->
+      <footer>
+        <div class="footer-container">
+          <div class="socialicons">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/id-ID/"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p class="copyright">Copyright &copy;2023; Di buat oleh <span class="designer">Group 10 Semarang</span></p>
+        </div>
+      </footer>
+    <!-- Footer (Akhir)-->
+
+    <!-- InfoBerita (Awal)-->
+      <div class="infoberita"> <div id="marquee-container"></div> </div>
+    <!-- InfoBerita (Akhir)-->
+
+    <!-- JavaScript -->
+    <script src="js/xgrow.js"></script>
+    <script src="js/APIxgrow.js"></script>
+    <script>
+      function generateKodeAcak(panjang) {
+      const karakter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      let kodeAcak = "";
+      for (let i = 0; i < panjang; i++) {
+        const indeksAcak = Math.floor(Math.random() * karakter.length);
+        kodeAcak += karakter.charAt(indeksAcak); }
+      return kodeAcak; }
+      document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("kodependataan").value = generateKodeAcak(15);
+    });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        async function tampilkanDataKursus() {
+          const idKursus = new URLSearchParams(window.location.search).get("id");
+          const jenisKursus = new URLSearchParams(window.location.search).get("jenis");
+          if (!idKursus || !jenisKursus) {
+            console.error("ID kursus atau jenis kursus tidak ditemukan dalam parameter URL.");
+            return;
+          }
+          let apiUrl;
+          if (jenisKursus === "unggulan") {
+            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan/${idKursus}`;
+          } else if (jenisKursus === "pbaru") {
+            apiUrl = `https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru/${idKursus}`;
+          } else {
+            console.error("Jenis kursus tidak valid.");
+            return;
+          }
+          try {
+            const response = await fetch(apiUrl);
+            const dataKursus = await response.json();
+    
+            if (dataKursus && dataKursus[0]) {
+              document.getElementById("idKursus").value = dataKursus[0].id;
+              document.getElementById("judul").value = dataKursus[0].judul;
+              document.getElementById("keterangan").value = dataKursus[0].keterangan;
+            } else {
+              console.error("Data kursus tidak lengkap.");
+            }
+          } catch (error) {
+            console.error("Kesalahan data kursus:", error);
+          }
+        }
+        tampilkanDataKursus();
+      });
+    </script>
+
+  </body>
+</html>
+  
