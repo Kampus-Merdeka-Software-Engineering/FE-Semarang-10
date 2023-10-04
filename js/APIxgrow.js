@@ -1,3 +1,7 @@
+/*------------------------------------------------------------------------------------
+JS pengelola API ini di buat oleh Grub 10 Section Semarang untuk Company Profil XGrow
+--------------------------------------------------------------------------------------*/
+
 // Fungsi untuk kirim form kontak (Kontak) (Awal)
 function kirimForm(event) {
   event.preventDefault();
@@ -42,6 +46,8 @@ function kirimForm(event) {
 }
 // Fungsi untuk kirim form kontak (Kontak) (Akhir)
 
+
+
 // Fungsi untuk kirim form berlangganan (Kontak) (Awal)
 function kirimFormBerlangganan(event) {
   event.preventDefault();
@@ -76,6 +82,7 @@ function kirimFormBerlangganan(event) {
 // Fungsi untuk kirim form berlangganan (Kontak) (Akhir)
 
 
+
 // Fungsi untuk menampilkan pesan PopUp (Awal)
 function tampilkanPopup(pesan) {
     const popup = document.getElementById("popup");
@@ -89,6 +96,7 @@ function tampilkanPopup(pesan) {
 // Fungsi untuk menampilkan pesan PopUp  (Akhir)
 
 
+
 // Fungsi untuk menampilkan tutup pesan PopUp (Awal)
 function tutupPopup() {
     const popup = document.getElementById("popup");
@@ -98,6 +106,8 @@ function tutupPopup() {
     overlay.style.display = "none";
 }
 // Fungsi untuk menampilkan tutup pesan PopUp (Akhir)
+
+
 
 // Fungsi untuk menampilkan Info Berita (Awal)
 const apiUrl = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/infoberita';
@@ -118,6 +128,8 @@ async function fetchData() {
 fetchData();
 // Fungsi untuk menampilkan Info Berita (Akhir)
 
+
+
 // Fungsi untuk menampilkan data home (Awal)
 const dataHomeUrl = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/datahome';
 async function fetchDataHome() {
@@ -137,6 +149,8 @@ async function fetchDataHome() {
 }
 fetchDataHome();
 // Fungsi untuk menampilkan data home (Akhir)
+
+
 
 // Fungsi untuk menampilkan data program unggulan (Awal)
 const urlUnggulan = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/unggulan';
@@ -165,6 +179,8 @@ async function ambilDataDanTampilkanKartu() {
 ambilDataDanTampilkanKartu();
 // Fungsi untuk menampilkan data program unggulan (Akhir)
 
+
+
 // Fungsi untuk menampilkan data program baru (Awal)
 const urlPbaru = 'https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pbaru';
 const kontainerKartuPbaru = document.getElementById('kartu-container-pbaru');
@@ -192,6 +208,8 @@ async function ambilDataDanTampilkanKartuPbaru() {
 ambilDataDanTampilkanKartuPbaru();
 // Fungsi untuk menampilkan data program baru (Akhir)
 
+
+
 // Fungsi untuk link ke pendataan program unggulan dan baru (Awal)
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('tambah-kursus')) {
@@ -203,6 +221,7 @@ document.addEventListener('click', (event) => {
   }
 });
 // Fungsi untuk link ke pendataan program unggulan dan baru (Akhir)
+
 
 
 // Fungsi untuk pengiriman data pendataan ke API (Awal)
@@ -225,7 +244,6 @@ function daftarForm(event) {
       tampilkanPopup("Masukkan alamat email yang valid.");
       return;
   }
-
   const data = {
     kodependataan: kodependataan,
     judul: judul,
@@ -236,7 +254,6 @@ function daftarForm(event) {
     status: "Proses Daftar",
     tanggalpendataan: new Date().toISOString().split('T')[0],
   };
-
   fetch("https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/api/pendataan", {
     method: "POST",
     headers: {
@@ -255,7 +272,7 @@ function daftarForm(event) {
     window.location.href = "index.html?showPopup=gagal";
   });
 }
-// Popup - pesan
+// --- Popup - pesan
   const urlParams = new URLSearchParams(window.location.search);
   const showPopup = urlParams.get('showPopup');
     if (showPopup === 'berhasil') {

@@ -1,5 +1,7 @@
 
-// Style JavaScript di buat oleh XGROW
+/*----------------------------------------------------------------------------
+JS Style ini di buat oleh Grub 10 Section Semarang untuk Company Profil XGrow
+------------------------------------------------------------------------------*/
 
 // Function Navigasi Bar Smooth (Navbar) (Awal)
 document.querySelectorAll("nav a").forEach((tautan) => {
@@ -19,6 +21,7 @@ document.querySelectorAll("nav a").forEach((tautan) => {
   });
 });
 // Function Navigasi Bar Smooth (Navbar) (Akhir)
+
 
 
 // Href aktif di A (Navbar) (Awal)
@@ -51,12 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // Href aktif di A (Navbar) (Akhir)
 
 
+
 // Function Gambar (Home) (Awal)
   document.addEventListener("DOMContentLoaded", function () {
     var imgHome = document.getElementById("imgHomeUbah");
     imgHome.classList.add("tampil");
   });
 // Function Gambar (Home) (Akhir)
+
 
 
 // Function Ubah Teks (Home) (Awal)
@@ -79,8 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function Ubah Teks (Home) (Akhir)
 
 
+
 // Function Prome Teks (Promo) (Awal)
-  // - Variabel
+  // --- Variabel
   const gambarPromosi = document.querySelector('.promo-image img');
   const teksPromosi = document.querySelector('.promo-text');
   const promosi = [
@@ -111,8 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
   let indeksPromoSaatIni = 0;
-
-  // - Fungsi untuk mengganti teks promo
+  // --- Fungsi untuk mengganti teks promo
   function gantiPromo() {
     gambarPromosi.classList.remove('fade-masuk');
     gambarPromosi.classList.add('fade-keluar');
@@ -132,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   setInterval(gantiPromo, 7000);
 // Function Promo Teks (Promo) (Akhir)
+
+
 
 // - Fungsi untuk card slide (program) (Awal)
   const buttonSebelumnya = document.getElementById("buttonSebelumnya");
@@ -162,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 // - Fungsi untuk card slide (program) (Akhir)
+
+
 
 // Kontak toggle (Kontak) (Awal)
   const tampilFormKontakTombol = document.getElementById('tampilFormKontak');
