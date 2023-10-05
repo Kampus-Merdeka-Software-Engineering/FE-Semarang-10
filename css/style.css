@@ -228,7 +228,7 @@ Style Section - Card Data Home/Rumah (Index.html)
   text-align: center;
   padding: 20px;
   position: absolute;
-  top: 785px;
+  top: 740px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
@@ -253,29 +253,49 @@ Style Section - Card Data Home/Rumah (Index.html)
   font-weight: bold;
   color: #fdbd58;
 }
-@media (max-width: 920px) {
-  .home{
-    padding-bottom: 350px;
-    
-  }
-  .promo-container{
-    padding-top: 350px;
+
+@media (max-width: 1080px) {
+  .data-home {
+    top: auto;
+    left: 50%;
   }
 }
+@media (max-width: 1020px) {
+  .data-home {
+    top: auto;
+    left: 50%;
+  }
+}
+@media (max-width: 920px) {
+  .data-home {
+    width: 700px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .data-home {
-      max-width: 80%;
-      font-size: 11px;
-      height: 100%;
-      max-height: 50%;
-      padding: 0px;
-      grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    font-size: 11px;
+    height: auto;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
   }
   .home{
-    padding-bottom: 350px;
-  }
-  .promo-container{
-    padding-top: 350px;
+    padding-bottom: 150px;
   }
   .data-home h1 {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -289,6 +309,7 @@ Style Section - Card Data Home/Rumah (Index.html)
     color: #fdbd58;
   }
 }
+
 @media (max-width: 480px) {
   .data-home {
       max-width: 80%;
@@ -304,6 +325,7 @@ Style Section - Card Data Home/Rumah (Index.html)
     padding-top: 350px;
   }
 }
+
 
 /*-----------------------------------------------------------------
 Style Section - Promo (Index.html)
@@ -365,6 +387,7 @@ Style Section - Promo (Index.html)
 @media (max-width: 768px) {
   .promo-container {
     padding: 20px;
+    padding-top:150px;
     display: block;
   }
   .promo-content {
