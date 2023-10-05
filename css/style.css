@@ -504,6 +504,12 @@ Style Section - Program dan Kartu Program (index.html)
   scroll-behavior: smooth;
   scroll-snap-type: hidden;
 }
+.section-tengahPbaru {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: hidden;
+}
 .section-kiri {
   display: flex;
   padding-right: 30px;
@@ -512,6 +518,26 @@ Style Section - Program dan Kartu Program (index.html)
   align-items: center;
 }
 .section-kanan {
+  display: flex;
+  padding-left: 30px;
+  padding-right: 150px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section-tengahpbaru {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: hidden;
+}
+.section-kiripbaru {
+  display: flex;
+  padding-right: 30px;
+  padding-left: 150px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.section-kananpbaru {
   display: flex;
   padding-left: 30px;
   padding-right: 150px;
@@ -531,6 +557,11 @@ Style Section - Program dan Kartu Program (index.html)
   }
   .section-kiri,
   .section-kanan {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section-kiripbaru,
+  .section-kananpbaru {
     padding-left: 20px;
     padding-right: 20px;
   }

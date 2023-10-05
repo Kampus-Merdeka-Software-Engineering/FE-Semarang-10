@@ -93,27 +93,27 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       gambar: 'assets/img-promo/img-p.gif',
       judul: 'XGROW PROMO DATA ANALYTICS',
-      deskripsi: 'Dengan menggunakan kode voucher "BELAJARDATA", Anda akan mendapatkan potongan harga hingga 50% promo ini khusus bagi Pelajar dan Mahasiswa, syarat dan ketentuan berlaku.',
+      deskripsi: 'Dengan menggunakan kode voucher "BELAJARDATA", Anda akan mendapatkan potongan harga hingga 50%. Promo ini khusus bagi pelajar dan mahasiswa. Syarat dan ketentuan berlaku.',
     },
     {
       gambar: 'assets/img-promo/img-p2.gif',
       judul: 'PROGRAM XGROW-PRO',
-      deskripsi: 'Ajukan karya ilmiah Anda untuk beasiswa belajar 100% bagi karya dengan nilai sangat baik, syarat dan ketentuan berlaku.',
+      deskripsi: 'Ajukan karya ilmiah Anda untuk beasiswa belajar 100% bagi karya dengan nilai sangat baik. Syarat dan ketentuan berlaku.',
     },
     {
       gambar: 'assets/img-promo/img-p3.gif',
       judul: 'PROGRAM ANAK BANGSA',
-      deskripsi: 'PROGRAM ANAK BANGSA XGROW adalah program yang memberikan fasilitas penunjang pendidikan 100%, dalam program ini XGROW menyediakan Kuota Internet, Laptop dan Modul cetak secara GRATIS. Program ini khusus bagi mahasiswa semester 1 dan 2 yang belajar di XGROW dengan syarat dan ketentuan berlaku. Syarat dan ketentuan berlaku.',
+      deskripsi: 'PROGRAM ANAK BANGSA XGROW adalah program yang memberikan fasilitas penunjang pendidikan 100%. Dalam program ini, XGROW menyediakan kuota internet, laptop, dan modul cetak secara GRATIS. Program ini khusus bagi mahasiswa semester 1 dan 2 yang belajar di XGROW dengan syarat dan ketentuan berlaku. Syarat dan ketentuan berlaku.',
     },
     {
       gambar: 'assets/img-promo/img-p4.gif',
       judul: 'XGROW PROMO SOFTWARE ENGINEERING 2023',
-      deskripsi: 'Anda akan mendapatkan keuntungan potongan harga hingga 30% dengan menggunakan kode XGROW_SE23, Dalam program belajar Anda akan belajar 40 Jam front end dan 60 jam back end serta 30 jam database, Anda juga Anda akan belajar teknologi terkini. Syarat dan ketentuan berlaku. ',
+      deskripsi: 'Anda akan mendapatkan keuntungan potongan harga hingga 30% dengan menggunakan kode XGROW_SE23. Dalam program belajar, Anda akan belajar 40 jam front end, 60 jam back end, serta 30 jam database. Anda juga akan belajar teknologi terkini. Syarat dan ketentuan berlaku.',
     },
     {
       gambar: 'assets/img-promo/img-p5.gif',
       judul: 'XGROW PROMO PROGRAMMER',
-      deskripsi: 'Gunakan kode voucer “XGROWDEV” dan dapatkan potongan harga hingga 50%, khusus untuk pilihan bidan pemrigraman. Promo ini dapat digunakan 2 kali pada masa pembelajaran, selama kelas masih tersedia. Syarat dan ketentuan berlaku. ',
+      deskripsi: 'Gunakan kode voucher "XGROWDEV" dan dapatkan potongan harga hingga 50%, khusus untuk pilihan bidang pemrograman. Promo ini dapat digunakan 2 kali selama masa pembelajaran, selama kelas masih tersedia. Syarat dan ketentuan berlaku.',
     },
   ];
   let indeksPromoSaatIni = 0;
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttonSelanjutnya = document.getElementById("buttonSelanjutnya");
   const kontainer = document.querySelector(".section-tengah");
   let jumlahGeser = 0;
-  const lebarKartu = 720;
+  const lebarKartu = 360;
   buttonSebelumnya.addEventListener("click", () => {
       jumlahGeser -= lebarKartu;
       if (jumlahGeser < 0) {
@@ -169,6 +169,39 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 // - Fungsi untuk card slide (program) (Akhir)
+
+
+
+// - Fungsi untuk card slide (program baru) (Awal)
+const buttonSebelumnyapbaru = document.getElementById("buttonSebelumnyapbaru");
+const buttonSelanjutnyapbaru = document.getElementById("buttonSelanjutnyapbaru");
+const kontainerpbaru = document.querySelector(".section-tengahpbaru");
+let jumlahGeserpbaru = 0;
+const lebarKartupbaru = 360;
+buttonSebelumnyapbaru.addEventListener("click", () => {
+    jumlahGeserpbaru -= lebarKartupbaru;
+    if (jumlahGeserpbaru < 0) {
+        jumlahGeserpbaru = 0;
+    }
+    kontainerpbaru.scroll({
+        top: 0,
+        left: jumlahGeserpbaru,
+        behavior: "smooth",
+    });
+});
+buttonSelanjutnyapbaru.addEventListener("click", () => {
+    jumlahGeserpbaru += lebarKartupbaru;
+    if (jumlahGeserpbaru > kontainerpbaru.scrollWidth - kontainerpbaru.clientWidth) {
+        jumlahGeserpbaru = kontainerpbaru.scrollWidth - kontainerpbaru.clientWidth;
+    }
+    kontainerpbaru.scroll({
+        top: 0,
+        left: jumlahGeserpbaru,
+        behavior: "smooth",
+    });
+});
+// - Fungsi untuk card slide (program baru) (Akhir)
+
 
 
 
